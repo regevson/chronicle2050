@@ -1,0 +1,145 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: demo.aux
+The style file: unsrt.bst
+Database file #1: lit.bib
+I was expecting a `,' or a `}'---line 244 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 252 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 259 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 275 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 290 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 298 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 315 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 324 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 340 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 347 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 354 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 370 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 384 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 395 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 413 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 430 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 447 of file lit.bib
+ : 
+ : //}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--empty booktitle in BaezaYatesSearchingTF
+Warning--empty year in BaezaYatesSearchingTF
+Warning--empty year in chronoseeker
+Warning--empty booktitle in analyzingCollective
+Warning--empty year in rankingRelated
+Warning--empty year in extractingCollective
+Warning--empty year in improvingRetrieval
+Warning--empty year in computationalExploration
+Warning--empty year in automaticExtraction
+Warning--empty year in extractingPredictive
+Warning--empty year in miningTheWeb
+Warning--empty year in predictingTheNews
+Warning--empty year in multiTimeline
+You've used 18 entries,
+            1791 wiz_defined-function locations,
+            561 strings with 8066 characters,
+and the built_in function-call counts, 5934 in all, are:
+= -- 564
+> -- 211
+< -- 14
++ -- 77
+- -- 59
+* -- 344
+:= -- 778
+add.period$ -- 61
+call.type$ -- 18
+change.case$ -- 18
+chr.to.int$ -- 0
+cite$ -- 31
+duplicate$ -- 326
+empty$ -- 590
+format.name$ -- 59
+if$ -- 1449
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 16
+newline$ -- 90
+num.names$ -- 18
+pop$ -- 106
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 237
+stack$ -- 0
+substring$ -- 398
+swap$ -- 156
+text.length$ -- 14
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 13
+while$ -- 51
+width$ -- 20
+write$ -- 197
+(There were 17 error messages)
