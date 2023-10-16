@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.8.27)  28 AUG 2023 13:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.15)  16 OCT 2023 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **main.tex
 (./main.tex
 LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-11>
+L3 programming layer <2023-10-10>
 (/home/juval/.TinyTeX/texmf-dist/tex/latex/base/report.cls
 Document Class: report 2023/05/17 v1.4n Standard LaTeX document class
-(/home/juval/.TinyTeX/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(/home/juval/.TinyTeX/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count185
 \c@chapter=\count186
@@ -168,10 +168,47 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip50
+) (/home/juval/.TinyTeX/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks19
+\AP@partial=\box51
+\AP@footins=\box52
+) (/home/juval/.TinyTeX/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen155
+\lightrulewidth=\dimen156
+\cmidrulewidth=\dimen157
+\belowrulesep=\dimen158
+\belowbottomsep=\dimen159
+\aboverulesep=\dimen160
+\abovetopsep=\dimen161
+\cmidrulesep=\dimen162
+\cmidrulekern=\dimen163
+\defaultaddspace=\dimen164
+\@cmidla=\count275
+\@cmidlb=\count276
+\@aboverulesep=\dimen165
+\@belowrulesep=\dimen166
+\@thisruleclass=\count277
+\@lastruleclass=\count278
+\@thisrulewidth=\dimen167
+) (/home/juval/.TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count279
+\float@exts=\toks20
+\float@box=\box53
+\@float@everytoks=\toks21
+\@floatcapt=\box54
+) (/home/juval/.TinyTeX/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip51
+\multirow@cntb=\count280
+\multirow@dima=\skip52
+\bigstrutjot=\dimen168
 ) (/home/juval/.TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count275
-\l__pdf_internal_box=\box51
+File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count281
+\l__pdf_internal_box=\box55
 ) (./main.aux
 
 LaTeX Warning: Label `fig:bert_architecture' multiply defined.
@@ -179,24 +216,24 @@ LaTeX Warning: Label `fig:bert_architecture' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -206,23 +243,23 @@ LaTeX Font Info:    ... okay on input line 16.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.2698pt, 452.96826pt, 72.2698pt)
-* v-part:(T,H,B)=(72.2698pt, 700.50723pt, 72.2698pt)
+* h-part:(L,W,R)=(56.9055pt, 483.69687pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=452.96826pt
-* \textheight=700.50723pt
-* \oddsidemargin=-0.00018pt
-* \evensidemargin=-0.00018pt
-* \topmargin=-37.00018pt
+* \textwidth=483.69687pt
+* \textheight=731.23584pt
+* \oddsidemargin=-15.36449pt
+* \evensidemargin=-15.36449pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=57.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -232,40 +269,53 @@ LaTeX Font Info:    ... okay on input line 16.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/home/juval/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/home/juval/.TinyTeX/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count282
+\scratchdimen=\dimen169
+\scratchbox=\box56
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen170
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks23
+) (/home/juval/.TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/home/juval/.TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring OFF on input line 16.
+Package hyperref Info: Link coloring OFF on input line 20.
  (./main.out) (./main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 19.
+(Font)              <12> on input line 23.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 19.
+(Font)              <8> on input line 23.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 23.
  [1
 
 {/home/juval/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.22 \end{abstract}
+l.26 \end{abstract}
                     [1] (./main.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 2.
+(Font)              <7> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 2.
+(Font)              <5> on input line 4.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 ...mberline {5}Topic Modeling}{24}{chapter.5}
+l.63 ...I Design and Layout}{26}{subsection.7.1.2}
                                                   % [1
 
 ])
@@ -274,173 +324,263 @@ l.52 ...mberline {5}Topic Modeling}{24}{chapter.5}
 
  [2]
 Chapter 1.
+
+
+pdfTeX warning: pdflatex (file ./img/system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<img/system.pdf, id=306, 464.69609pt x 184.77031pt>
+File: img/system.pdf Graphic file (type pdf)
+<use img/system.pdf>
+Package pdftex.def Info: img/system.pdf  used on input line 54.
+(pdftex.def)             Requested size: 369.88582pt x 147.07213pt.
 [3
 
-]
+] [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.69 \chapter
+             {Literature Review} <./img/system.pdf>]
 Chapter 2.
-
-Overfull \hbox (6.5875pt too wide) in paragraph at lines 33--33
-[]\OT1/cmr/bx/n/17.28 Existing Meth-ods for Future-related Sen-tence Ex-
- []
-
-[4
-
-]
-Chapter 3.
-<img/longbets.png, id=349, 741.77126pt x 925.4575pt>
-File: img/longbets.png Graphic file (type png)
-<use img/longbets.png>
-Package pdftex.def Info: img/longbets.png  used on input line 55.
-(pdftex.def)             Requested size: 228.05652pt x 284.52756pt.
 [5
 
 ]
-<img/horizons.png, id=357, 1924.18875pt x 943.525pt>
+Chapter 3.
+<img/longbets.png, id=368, 738.76pt x 520.94624pt>
+File: img/longbets.png Graphic file (type png)
+<use img/longbets.png>
+Package pdftex.def Info: img/longbets.png  used on input line 110.
+(pdftex.def)             Requested size: 403.48984pt x 284.52756pt.
+[6
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.121   \item \textit
+                     {"By 2029 no computer - or 'machine intelligence' - wil...]
+<img/horizons.png, id=382, 1924.18875pt x 943.525pt>
 File: img/horizons.png Graphic file (type png)
 <use img/horizons.png>
-Package pdftex.def Info: img/horizons.png  used on input line 84.
+Package pdftex.def Info: img/horizons.png  used on input line 139.
 (pdftex.def)             Requested size: 455.24408pt x 223.2257pt.
+ [7
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.150   \item 2
+               3\% of them contain a date <./img/longbets.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
-Overfull \hbox (2.27582pt too wide) in paragraph at lines 84--85
- [][] 
  []
 
-[6 <./img/longbets.png>] [7 <./img/horizons.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-[8]
-<img/classification_website.png, id=379, 1795.70876pt x 563.10374pt>
+[8
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.171   \item \textit
+                     {"They should use words like 'could, 'would', 'may', 'm... <./img/horizons.png>]
+<img/classification_website.png, id=406, 1795.70876pt x 563.10374pt>
 File: img/classification_website.png Graphic file (type png)
 <use img/classification_website.png>
-Package pdftex.def Info: img/classification_website.png  used on input line 127.
+Package pdftex.def Info: img/classification_website.png  used on input line 182.
 (pdftex.def)             Requested size: 455.24408pt x 142.7518pt.
-
-Overfull \hbox (2.27582pt too wide) in paragraph at lines 127--128
- [][] 
- []
-
-[9 <./img/classification_website.png>]
+ [9
+pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.194 \chapter
+              {Finetuned RoBERTa Classifier} <./img/classification_website.png>]
 Chapter 4.
-<img/transformer.png, id=386, 1324.95pt x 1866.975pt>
+<img/transformer.png, id=414, 1324.95pt x 1866.975pt>
 File: img/transformer.png Graphic file (type png)
 <use img/transformer.png>
-Package pdftex.def Info: img/transformer.png  used on input line 145.
+Package pdftex.def Info: img/transformer.png  used on input line 200.
 (pdftex.def)             Requested size: 170.71652pt x 240.5502pt.
 [10
 
-] [11 <./img/transformer.png>]
-<img/bert_architecture.png, id=399, 853.1875pt x 678.535pt>
+]
+<img/bert_architecture.png, id=421, 853.1875pt x 678.535pt>
 File: img/bert_architecture.png Graphic file (type png)
 <use img/bert_architecture.png>
-Package pdftex.def Info: img/bert_architecture.png  used on input line 178.
+Package pdftex.def Info: img/bert_architecture.png  used on input line 233.
 (pdftex.def)             Requested size: 341.43306pt x 271.54378pt.
- [12]
-<img/bert_input_representation.png, id=404, 853.1875pt x 253.94875pt>
+ [11
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.238 
+       <./img/transformer.png>]
+<img/bert_input_representation.png, id=428, 853.1875pt x 253.94875pt>
 File: img/bert_input_representation.png Graphic file (type png)
 <use img/bert_input_representation.png>
-Package pdftex.def Info: img/bert_input_representation.png  used on input line 200.
+Package pdftex.def Info: img/bert_input_representation.png  used on input line 255.
 (pdftex.def)             Requested size: 341.43306pt x 101.62807pt.
- [13 <./img/bert_architecture.png>] [14 <./img/bert_input_representation.png>]
-<img/mlm_bert.png, id=420, 1405.25pt x 790.955pt>
+ [12
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.264 
+       <./img/bert_architecture.png>]
+<img/mlm_bert.png, id=436, 1405.25pt x 790.955pt>
 File: img/mlm_bert.png Graphic file (type png)
 <use img/mlm_bert.png>
-Package pdftex.def Info: img/mlm_bert.png  used on input line 230.
+Package pdftex.def Info: img/mlm_bert.png  used on input line 285.
 (pdftex.def)             Requested size: 341.43306pt x 192.17445pt.
- [15 <./img/mlm_bert.png (PNG copy)>]
-<img/bert_results.png, id=427, 901.3675pt x 195.73125pt>
+ [13
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.293 T
+       his process allows the model to be trained bidirectionally, leveragin... <./img/bert_input_representation.png>] [14
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.319 \subsection
+                 {Evaluation and Performance} <./img/mlm_bert.png (PNG copy)>]
+<img/bert_results.png, id=453, 901.3675pt x 195.73125pt>
 File: img/bert_results.png Graphic file (type png)
 <use img/bert_results.png>
-Package pdftex.def Info: img/bert_results.png  used on input line 267.
+Package pdftex.def Info: img/bert_results.png  used on input line 322.
 (pdftex.def)             Requested size: 341.43306pt x 74.1427pt.
- [16] [17 <./img/bert_results.png>] [18]
-Overfull \hbox (2.23122pt too wide) in paragraph at lines 315--316
-[]\OT1/cmr/m/n/12 By ex-pand-ing the pre-train-ing data to in-clude a larger va-ri-ety of text sources, the RoBERTa
- []
-
-<img/roberta_results.png, id=452, 925.4575pt x 169.63374pt>
+ [15
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.352 
+       <./img/bert_results.png>]
+<img/roberta_results.png, id=462, 925.4575pt x 169.63374pt>
 File: img/roberta_results.png Graphic file (type png)
 <use img/roberta_results.png>
-Package pdftex.def Info: img/roberta_results.png  used on input line 320.
+Package pdftex.def Info: img/roberta_results.png  used on input line 375.
 (pdftex.def)             Requested size: 341.43306pt x 62.58488pt.
-
-Overfull \hbox (8.52837pt too wide) in paragraph at lines 328--329
-[]\OT1/cmr/m/n/12 An in-ter-est-ing ob-ser-va-tion made by the au-thors was that even the longest-trained RoBERTa
- []
-
-[19 <./img/roberta_results.png>]
+ [16
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.389 
+       <./img/roberta_results.png>]
 
 pdfTeX warning: pdflatex (file ./img/classifier_archi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/classifier_archi.pdf, id=459, 528.64499pt x 407.18524pt>
+<img/classifier_archi.pdf, id=474, 515.04419pt x 387.36719pt>
 File: img/classifier_archi.pdf Graphic file (type pdf)
 <use img/classifier_archi.pdf>
-Package pdftex.def Info: img/classifier_archi.pdf  used on input line 354.
-(pdftex.def)             Requested size: 426.79134pt x 328.74336pt.
-[20] [21 <./img/classifier_archi.pdf>] [22] [23]
-Chapter 5.
-[24
+Package pdftex.def Info: img/classifier_archi.pdf  used on input line 409.
+(pdftex.def)             Requested size: 426.79134pt x 320.99454pt.
+[17]
+<img/final_model_train_loss.png, id=480, 450.68375pt x 226.8475pt>
+File: img/final_model_train_loss.png Graphic file (type png)
+<use img/final_model_train_loss.png>
+Package pdftex.def Info: img/final_model_train_loss.png  used on input line 441.
+(pdftex.def)             Requested size: 237.01411pt x 119.30093pt.
+<img/final_model_val_loss.png, id=481, 447.6725pt x 227.85126pt>
+File: img/final_model_val_loss.png Graphic file (type png)
+<use img/final_model_val_loss.png>
+Package pdftex.def Info: img/final_model_val_loss.png  used on input line 448.
+(pdftex.def)             Requested size: 237.01411pt x 120.63542pt.
 
-] [25] [26]
-<img/intertopic_distance_map.png, id=513, 571.13374pt x 477.785pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[18
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.456 \begin{itemize}
+                      <./img/classifier_archi.pdf>]
+<img/train_losses.png, id=511, 682.55pt x 421.575pt>
+File: img/train_losses.png Graphic file (type png)
+<use img/train_losses.png>
+Package pdftex.def Info: img/train_losses.png  used on input line 467.
+(pdftex.def)             Requested size: 237.01411pt x 146.38913pt.
+<img/valid_losses.png, id=512, 682.55pt x 421.575pt>
+File: img/valid_losses.png Graphic file (type png)
+<use img/valid_losses.png>
+Package pdftex.def Info: img/valid_losses.png  used on input line 474.
+(pdftex.def)             Requested size: 237.01411pt x 146.38913pt.
+ [19
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.491 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.491 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.491 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.491 
+       <./img/final_model_train_loss.png> <./img/final_model_val_loss.png> <./img/train_losses.png> <./img/valid_losses.png>] [20]
+Chapter 5.
+[21
+
+] [22]
+<img/intertopic_distance_map.png, id=543, 571.13374pt x 477.785pt>
 File: img/intertopic_distance_map.png Graphic file (type png)
 <use img/intertopic_distance_map.png>
-Package pdftex.def Info: img/intertopic_distance_map.png  used on input line 481.
+Package pdftex.def Info: img/intertopic_distance_map.png  used on input line 567.
 (pdftex.def)             Requested size: 284.52756pt x 238.02435pt.
-<img/topic_representation.png, id=514, 927.465pt x 381.425pt>
+<img/topic_representation.png, id=544, 927.465pt x 381.425pt>
 File: img/topic_representation.png Graphic file (type png)
 <use img/topic_representation.png>
-Package pdftex.def Info: img/topic_representation.png  used on input line 488.
+Package pdftex.def Info: img/topic_representation.png  used on input line 574.
 (pdftex.def)             Requested size: 426.79134pt x 175.52164pt.
- [27 <./img/intertopic_distance_map.png>] [28 <./img/topic_representation.png>]
+ [23
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.580 \chapter
+              {Temporal Expression Identification and Extraction}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.580 \chapter
+              {Temporal Expression Identification and Extraction} <./img/intertopic_distance_map.png> <./img/topic_representation.png>]
 Chapter 6.
-[29
+[24
 
-] [30] [31]
+] [25]
 Chapter 7.
-[32
+[26
 
-] [33] [34] [35] [36] [37] [38] [39]
+] [27] [28] [29] [30]
 Chapter 8.
-(./main.bbl [40
+(./main.bbl [31
 
-]
-
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
-
-) [41
+]) [32
 
 ] (./main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-11>
+L3 programming layer <2023-10-10>
  ***********
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 10E9C47DE0D7932761F2F6100C405C0A;11854
-(rerunfilecheck)             After:  7A1F91095D1A09D7C20232C8A516B2A2;11859.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: C185118C206EE70EF8DCD6F7EE31E946;10375.
  ) 
 Here is how much of TeX's memory you used:
- 8882 strings out of 477149
- 139060 string characters out of 5812949
- 1930254 words of memory out of 5000000
- 29690 multiletter control sequences out of 15000+600000
- 565507 words of font info for 60 fonts, out of 8000000 for 9000
+ 9499 strings out of 476470
+ 149018 string characters out of 5802173
+ 1937040 words of memory out of 5000000
+ 30949 multiletter control sequences out of 15000+600000
+ 566152 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,6n,79p,1555b,499s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/juval/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (43 pages, 1725949 bytes).
+ 75i,10n,79p,1705b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/juval/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on main.pdf (34 pages, 1786240 bytes).
 PDF statistics:
- 663 PDF objects out of 1000 (max. 8388607)
- 570 compressed objects within 6 object streams
- 147 named destinations out of 1000 (max. 500000)
- 565 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 709 PDF objects out of 1000 (max. 8388607)
+ 599 compressed objects within 6 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 534 words of extra memory for PDF output out of 10000 (max. 10000000)
 

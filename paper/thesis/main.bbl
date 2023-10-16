@@ -1,3 +1,82 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{BaezaYatesSearchingTF}
+Ricardo~A. Baeza-Yates.
+\newblock Searching the future.
+
+\bibitem{chronoseeker}
+Hideki Kawai, Adam Jatowt, Katsumi Tanaka, Kazuo Kunieda, and Keiji Yamada.
+\newblock {{ChronoSeeker}}: {{Search}} engine for future and past events.
+\newblock In {\em Proc. of the 4th ICUIMC}, {{ICUIMC}} '10. {Association for Computing Machinery}.
+
+\bibitem{supportingAnalysis}
+Adam Jatowt, Kensuke Kanazawa, Satoshi Oyama, and Katsumi Tanaka.
+\newblock Supporting analysis of future-related information in news archives and the web.
+\newblock In {\em Proc. of the 9th ACM/IEEE-CS Joint Conference on Digital Libraries}, JCDL '09, page 115–124, New York, NY, USA, 2009. Association for Computing Machinery.
+
+\bibitem{analyzingCollective}
+Adam Jatowt, Hideki Kawai, Kensuke Kanazawa, Katsumi Tanaka, Kazuo Kunieda, and Keiji Yamada.
+\newblock Analyzing collective view of future, time-referenced events on the web.
+\newblock pages 1123--1124, 04 2010.
+
+\bibitem{rankingRelated}
+Nattiya Kanhabua, Roi Blanco, and Michael Matthews.
+\newblock Ranking related news predictions.
+\newblock In {\em Proc. of the 34th {{ACM SIGIR}}}, {{SIGIR}} '11, pages 755--764. {Association for Computing Machinery}.
+
+\bibitem{extractingCollective}
+Adam Jatowt and Ching-man Au~Yeung.
+\newblock Extracting collective expectations about the future from large text collections.
+\newblock In {\em Proc. of the 20th CIKM}, pages 1259--1264. {ACM}.
+
+\bibitem{improvingRetrieval}
+Kensuke Kanazawa, Adam Jatowt, and Katsumi Tanaka.
+\newblock Improving retrieval of future-related information in text collections.
+\newblock In {\em {{IEEE}}/{{WIC}}/{{ACM}} 2011}, volume~1, pages 278--283.
+
+\bibitem{computationalExploration}
+Aiming Ni, Jinho~D. Choi, Jason Shepard, and P.~Wolff.
+\newblock Computational exploration to linguistic structures of future: {{Classification}} and categorization.
+\newblock In {\em North American Chapter of the Association for Computational Linguistics}.
+
+\bibitem{automaticExtraction}
+Yoko Nakajima.
+\newblock Automatic extraction of references to future events from news articles using semantic and morphological information.
+\newblock In {\em Proc. of the 24th IJCAI}, {{IJCAI}}'15, pages 4385--4386. {AAAI Press}.
+
+\bibitem{extractingPredictive}
+Navya Yarrabelly and K.~Karlapalem.
+\newblock Extracting predictive statements with their scope from news articles.
+\newblock In {\em ICWSM}.
+
+\bibitem{miningTheWeb}
+Kira Radinsky and Eric Horvitz.
+\newblock Mining the web to predict future events.
+\newblock In {\em Proc. of the 6th WSDM}, {{WSDM}} '13, pages 255--264. {Association for Computing Machinery}.
+
+\bibitem{predictingTheNews}
+Kira Radinsky, Sagie Davidovich, and Shaul Markovitch.
+\newblock Predicting the news of tomorrow using patterns in web search queries.
+\newblock In {\em IEEE/WIC/ACM 2008}, volume~1, pages 363--367.
+
+\bibitem{abstractiveTimeline}
+Julius Steen and Katja Markert.
+\newblock Abstractive timeline summarization.
+\newblock In {\em Proc. of the 2nd Workshop on New Frontiers in Summarization}, pages 21--31, Hong Kong, China, November 2019. Association for Computational Linguistics.
+
+\bibitem{multitimeline}
+Yi~Yu, Adam Jatowt, Antoine Doucet, Kazunari Sugiyama, and Masatoshi Yoshikawa.
+\newblock Multi-{{TimeLine}} summarization ({{MTLS}}): {{Improving}} timeline summarization by generating multiple summaries.
+\newblock In {\em Proc. of the 59th ACL and 11th IJCNLP}, pages 377--387. {Association for Computational Linguistics}.
+
+\bibitem{stateOfTheArtTimeline}
+Demian Gholipour~Ghalandari and Georgiana Ifrim.
+\newblock Examining the state-of-the-art in news timeline summarization.
+\newblock In {\em Proc. of the 58th ACL}, pages 1322--1334, Online, July 2020. Association for Computational Linguistics.
+
+\bibitem{queryBased}
+Hai~Leong Chieu and Yoong~Keok Lee.
+\newblock Query based event extraction along a timeline.
+\newblock In {\em Proceedings of the 27th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}, SIGIR '04, page 425–432, New York, NY, USA, 2004. Association for Computing Machinery.
 
 \end{thebibliography}
