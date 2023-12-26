@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.15)  16 OCT 2023 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.15)  26 DEC 2023 21:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -302,20 +302,20 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [1
 
 {/home/juval/.TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 25.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.26 \end{abstract}
                     [1] (./main.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ...I Design and Layout}{26}{subsection.7.1.2}
+l.62 ...mentation and Architecture}{27}{chapter.7}
                                                   % [1
 
 ])
@@ -327,7 +327,7 @@ Chapter 1.
 
 
 pdfTeX warning: pdflatex (file ./img/system.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/system.pdf, id=306, 464.69609pt x 184.77031pt>
+<img/system.pdf, id=333, 464.69609pt x 184.77031pt>
 File: img/system.pdf Graphic file (type pdf)
 <use img/system.pdf>
 Package pdftex.def Info: img/system.pdf  used on input line 54.
@@ -338,223 +338,264 @@ Package pdftex.def Info: img/system.pdf  used on input line 54.
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.69 \chapter
+l.61 \chapter
              {Literature Review} <./img/system.pdf>]
 Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 77--78
+
+ []
+
 [5
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+[6]
 Chapter 3.
-<img/longbets.png, id=368, 738.76pt x 520.94624pt>
+<img/longbets.png, id=365, 738.76pt x 520.94624pt>
 File: img/longbets.png Graphic file (type png)
 <use img/longbets.png>
-Package pdftex.def Info: img/longbets.png  used on input line 110.
+Package pdftex.def Info: img/longbets.png  used on input line 134.
 (pdftex.def)             Requested size: 403.48984pt x 284.52756pt.
-[6
+[7
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.121   \item \textit
+l.145   \item \textit
                      {"By 2029 no computer - or 'machine intelligence' - wil...]
-<img/horizons.png, id=382, 1924.18875pt x 943.525pt>
+<img/horizons.png, id=379, 1924.18875pt x 943.525pt>
 File: img/horizons.png Graphic file (type png)
 <use img/horizons.png>
-Package pdftex.def Info: img/horizons.png  used on input line 139.
+Package pdftex.def Info: img/horizons.png  used on input line 163.
 (pdftex.def)             Requested size: 455.24408pt x 223.2257pt.
- [7
+ [8
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.150   \item 2
+l.174   \item 2
                3\% of them contain a date <./img/longbets.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[8
+[9
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.171   \item \textit
+l.195   \item \textit
                      {"They should use words like 'could, 'would', 'may', 'm... <./img/horizons.png>]
-<img/classification_website.png, id=406, 1795.70876pt x 563.10374pt>
+<img/classification_website.png, id=403, 1795.70876pt x 563.10374pt>
 File: img/classification_website.png Graphic file (type png)
 <use img/classification_website.png>
-Package pdftex.def Info: img/classification_website.png  used on input line 182.
+Package pdftex.def Info: img/classification_website.png  used on input line 206.
 (pdftex.def)             Requested size: 455.24408pt x 142.7518pt.
- [9
+ [10
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.194 \chapter
+l.218 \chapter
               {Finetuned RoBERTa Classifier} <./img/classification_website.png>]
 Chapter 4.
-<img/transformer.png, id=414, 1324.95pt x 1866.975pt>
+<img/transformer.png, id=411, 1324.95pt x 1866.975pt>
 File: img/transformer.png Graphic file (type png)
 <use img/transformer.png>
-Package pdftex.def Info: img/transformer.png  used on input line 200.
+Package pdftex.def Info: img/transformer.png  used on input line 224.
 (pdftex.def)             Requested size: 170.71652pt x 240.5502pt.
-[10
+[11
 
 ]
-<img/bert_architecture.png, id=421, 853.1875pt x 678.535pt>
+<img/bert_architecture.png, id=419, 853.1875pt x 678.535pt>
 File: img/bert_architecture.png Graphic file (type png)
 <use img/bert_architecture.png>
-Package pdftex.def Info: img/bert_architecture.png  used on input line 233.
+Package pdftex.def Info: img/bert_architecture.png  used on input line 257.
 (pdftex.def)             Requested size: 341.43306pt x 271.54378pt.
- [11
+ [12
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.238 
+l.262 
        <./img/transformer.png>]
-<img/bert_input_representation.png, id=428, 853.1875pt x 253.94875pt>
+<img/bert_input_representation.png, id=425, 853.1875pt x 253.94875pt>
 File: img/bert_input_representation.png Graphic file (type png)
 <use img/bert_input_representation.png>
-Package pdftex.def Info: img/bert_input_representation.png  used on input line 255.
+Package pdftex.def Info: img/bert_input_representation.png  used on input line 279.
 (pdftex.def)             Requested size: 341.43306pt x 101.62807pt.
- [12
+ [13
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.264 
+l.288 
        <./img/bert_architecture.png>]
-<img/mlm_bert.png, id=436, 1405.25pt x 790.955pt>
+<img/mlm_bert.png, id=433, 1405.25pt x 790.955pt>
 File: img/mlm_bert.png Graphic file (type png)
 <use img/mlm_bert.png>
-Package pdftex.def Info: img/mlm_bert.png  used on input line 285.
+Package pdftex.def Info: img/mlm_bert.png  used on input line 309.
 (pdftex.def)             Requested size: 341.43306pt x 192.17445pt.
- [13
+ [14
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.293 T
-       his process allows the model to be trained bidirectionally, leveragin... <./img/bert_input_representation.png>] [14
+l.317 T
+       his process allows the model to be trained bidirectionally, leveragin... <./img/bert_input_representation.png>] [15
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.319 \subsection
+l.343 \subsection
                  {Evaluation and Performance} <./img/mlm_bert.png (PNG copy)>]
-<img/bert_results.png, id=453, 901.3675pt x 195.73125pt>
+<img/bert_results.png, id=450, 901.3675pt x 195.73125pt>
 File: img/bert_results.png Graphic file (type png)
 <use img/bert_results.png>
-Package pdftex.def Info: img/bert_results.png  used on input line 322.
+Package pdftex.def Info: img/bert_results.png  used on input line 346.
 (pdftex.def)             Requested size: 341.43306pt x 74.1427pt.
- [15
+ [16
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.352 
+l.376 
        <./img/bert_results.png>]
-<img/roberta_results.png, id=462, 925.4575pt x 169.63374pt>
+<img/roberta_results.png, id=459, 925.4575pt x 169.63374pt>
 File: img/roberta_results.png Graphic file (type png)
 <use img/roberta_results.png>
-Package pdftex.def Info: img/roberta_results.png  used on input line 375.
+Package pdftex.def Info: img/roberta_results.png  used on input line 399.
 (pdftex.def)             Requested size: 341.43306pt x 62.58488pt.
- [16
+ [17
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.389 
+l.413 
        <./img/roberta_results.png>]
 
 pdfTeX warning: pdflatex (file ./img/classifier_archi.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/classifier_archi.pdf, id=474, 515.04419pt x 387.36719pt>
+<img/classifier_archi.pdf, id=472, 515.04419pt x 387.36719pt>
 File: img/classifier_archi.pdf Graphic file (type pdf)
 <use img/classifier_archi.pdf>
-Package pdftex.def Info: img/classifier_archi.pdf  used on input line 409.
+Package pdftex.def Info: img/classifier_archi.pdf  used on input line 433.
 (pdftex.def)             Requested size: 426.79134pt x 320.99454pt.
-[17]
-<img/final_model_train_loss.png, id=480, 450.68375pt x 226.8475pt>
+[18]
+<img/final_model_train_loss.png, id=477, 450.68375pt x 226.8475pt>
 File: img/final_model_train_loss.png Graphic file (type png)
 <use img/final_model_train_loss.png>
-Package pdftex.def Info: img/final_model_train_loss.png  used on input line 441.
+Package pdftex.def Info: img/final_model_train_loss.png  used on input line 465.
 (pdftex.def)             Requested size: 237.01411pt x 119.30093pt.
-<img/final_model_val_loss.png, id=481, 447.6725pt x 227.85126pt>
+<img/final_model_val_loss.png, id=478, 447.6725pt x 227.85126pt>
 File: img/final_model_val_loss.png Graphic file (type png)
 <use img/final_model_val_loss.png>
-Package pdftex.def Info: img/final_model_val_loss.png  used on input line 448.
+Package pdftex.def Info: img/final_model_val_loss.png  used on input line 472.
 (pdftex.def)             Requested size: 237.01411pt x 120.63542pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18
+[19
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.456 \begin{itemize}
+l.480 \begin{itemize}
                       <./img/classifier_archi.pdf>]
-<img/train_losses.png, id=511, 682.55pt x 421.575pt>
+<img/train_losses.png, id=508, 682.55pt x 421.575pt>
 File: img/train_losses.png Graphic file (type png)
 <use img/train_losses.png>
-Package pdftex.def Info: img/train_losses.png  used on input line 467.
+Package pdftex.def Info: img/train_losses.png  used on input line 491.
 (pdftex.def)             Requested size: 237.01411pt x 146.38913pt.
-<img/valid_losses.png, id=512, 682.55pt x 421.575pt>
+<img/valid_losses.png, id=509, 682.55pt x 421.575pt>
 File: img/valid_losses.png Graphic file (type png)
 <use img/valid_losses.png>
-Package pdftex.def Info: img/valid_losses.png  used on input line 474.
+Package pdftex.def Info: img/valid_losses.png  used on input line 498.
 (pdftex.def)             Requested size: 237.01411pt x 146.38913pt.
- [19
+ [20
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.491 
+l.515 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.491 
+l.515 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.10}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.491 
+l.515 
       
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.11}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.491 
-       <./img/final_model_train_loss.png> <./img/final_model_val_loss.png> <./img/train_losses.png> <./img/valid_losses.png>] [20]
+l.515 
+       <./img/final_model_train_loss.png> <./img/final_model_val_loss.png> <./img/train_losses.png> <./img/valid_losses.png>] [21]
 Chapter 5.
-[21
+[22
 
-] [22]
-<img/intertopic_distance_map.png, id=543, 571.13374pt x 477.785pt>
+] [23]
+<img/intertopic_distance_map.png, id=541, 571.13374pt x 477.785pt>
 File: img/intertopic_distance_map.png Graphic file (type png)
 <use img/intertopic_distance_map.png>
-Package pdftex.def Info: img/intertopic_distance_map.png  used on input line 567.
+Package pdftex.def Info: img/intertopic_distance_map.png  used on input line 591.
 (pdftex.def)             Requested size: 284.52756pt x 238.02435pt.
-<img/topic_representation.png, id=544, 927.465pt x 381.425pt>
+<img/topic_representation.png, id=542, 927.465pt x 381.425pt>
 File: img/topic_representation.png Graphic file (type png)
 <use img/topic_representation.png>
-Package pdftex.def Info: img/topic_representation.png  used on input line 574.
+Package pdftex.def Info: img/topic_representation.png  used on input line 598.
 (pdftex.def)             Requested size: 426.79134pt x 175.52164pt.
- [23
+ [24
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.580 \chapter
+l.604 \chapter
               {Temporal Expression Identification and Extraction}
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.580 \chapter
+l.604 \chapter
               {Temporal Expression Identification and Extraction} <./img/intertopic_distance_map.png> <./img/topic_representation.png>]
 Chapter 6.
-[24
+[25
 
-] [25]
+] [26]
 Chapter 7.
-[26
+[27
 
-] [27] [28] [29] [30]
+] [28] [29] [30] [31]
 Chapter 8.
-(./main.bbl [31
 
-]) [32
+LaTeX Warning: Citation `yusuke' on page 32 undefined on input line 823.
+
+[32
+
+]
+Chapter 9.
+(./main.bbl [33
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [34
 
 ] (./main.aux)
  ***********
@@ -563,24 +604,27 @@ L3 programming layer <2023-10-10>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C185118C206EE70EF8DCD6F7EE31E946;10375.
+(rerunfilecheck)             Checksum: FEB7C13060D33890E090B7E930B3825D;11111.
  ) 
 Here is how much of TeX's memory you used:
- 9499 strings out of 476470
- 149018 string characters out of 5802173
- 1937040 words of memory out of 5000000
- 30949 multiletter control sequences out of 15000+600000
+ 9480 strings out of 476470
+ 148500 string characters out of 5802173
+ 1938040 words of memory out of 5000000
+ 30939 multiletter control sequences out of 15000+600000
  566152 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 75i,10n,79p,1705b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,10n,79p,1555b,501s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/juval/.TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/juval/.TinyTeX/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on main.pdf (34 pages, 1786240 bytes).
+Output written on main.pdf (36 pages, 1789894 bytes).
 PDF statistics:
- 709 PDF objects out of 1000 (max. 8388607)
- 599 compressed objects within 6 object streams
- 160 named destinations out of 1000 (max. 500000)
- 534 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 596 compressed objects within 6 object streams
+ 151 named destinations out of 1000 (max. 500000)
+ 574 words of extra memory for PDF output out of 10000 (max. 10000000)
 

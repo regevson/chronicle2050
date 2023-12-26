@@ -2,59 +2,47 @@ This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: unsrt.bst
+I found no \citation commands---while reading file main.aux
 Database file #1: sample-base.bib
-Warning--empty booktitle in BaezaYatesSearchingTF
-Warning--empty year in BaezaYatesSearchingTF
-Warning--empty year in chronoseeker
-Warning--empty booktitle in analyzingCollective
-Warning--empty year in rankingRelated
-Warning--empty year in extractingCollective
-Warning--empty year in improvingRetrieval
-Warning--empty year in computationalExploration
-Warning--empty year in automaticExtraction
-Warning--empty year in extractingPredictive
-Warning--empty year in miningTheWeb
-Warning--empty year in predictingTheNews
-Warning--empty year in multitimeline
-You've used 16 entries,
+You've used 0 entries,
             1791 wiz_defined-function locations,
-            554 strings with 6894 characters,
-and the built_in function-call counts, 5543 in all, are:
-= -- 546
-> -- 171
-< -- 14
-+ -- 63
-- -- 47
-* -- 310
-:= -- 708
-add.period$ -- 57
-call.type$ -- 16
-change.case$ -- 16
+            445 strings with 3517 characters,
+and the built_in function-call counts, 18 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 2
+:= -- 7
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 29
-duplicate$ -- 324
-empty$ -- 548
-format.name$ -- 47
-if$ -- 1373
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 1
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 16
-newline$ -- 82
-num.names$ -- 16
-pop$ -- 91
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 3
+num.names$ -- 0
+pop$ -- 0
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 240
+skip$ -- 1
 stack$ -- 0
-substring$ -- 376
-swap$ -- 162
-text.length$ -- 14
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 13
-while$ -- 47
-width$ -- 18
-write$ -- 182
-(There were 13 warnings)
+warning$ -- 0
+while$ -- 0
+width$ -- 0
+write$ -- 2
+(There was 1 error message)

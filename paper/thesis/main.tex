@@ -22,7 +22,7 @@
 \maketitle
 
 \begin{abstract}
-In today’s rapidly evolving world, maintaining a comprehensive overview of the future landscape is essential for staying competitive and making informed decisions. However, given the overwhelming volume of daily news, manually obtaining a thorough overview of an entity’s future prospects is quite challenging. To address this, we present a system that is designed to automatically extract future-related information of a queried entity from news articles. Our approach involves fine-tuning a language model on a novel multi-source dataset consisting of 6,800 annotated sentences to identify future-related sentences. We use topic modeling to extract the main topics from the data, which, along with their contents, are subsequently ranked by relevance. A temporal tagger is utilized to detect temporal expressions and map them to specific dates. This enables the sentences to be presented on an interactive timeline. User evaluations have shown favorable feedback on the timelines and summaries our system produces.
+In today's rapidly evolving world, maintaining a comprehensive overview of the future landscape is essential for staying competitive and making informed decisions. However, given the large volume of daily news, manually obtaining a thorough overview of an entity's future prospects is quite challenging. To address this, we present a system designed to automatically extract and summarize future-related information of a queried entity from news articles. Our approach utilizes a novel and publicly accessible multi-source dataset comprising 6,800 annotated sentences to fine-tune a language model to identify future-related sentences. We then use topic modeling to extract the main topics from the data and rank them by relevance as well as present them on an interactive timeline. User evaluations have shown that the timelines and summaries our system produces are useful. The system is available as a web application at: \url{https://chronicle2050.regevson.com}.
 \end{abstract}
 
 \tableofcontents
@@ -58,21 +58,45 @@ Finally, Chapter 8 summarizes the evaluation of the system based on metrics and 
 
 
 
-%In Chapter 2 the dated, as well as more recent literature is reviewed ...
-%After that 
-
-
-%In the following we will go through the systems components step by step and thereby delve into their implementation details and explain decisions made. The goal is to give an indepth overview of the system and also explain the theory behind and the inner workings of the models used.
-
-%In the following, we will delve into the system’s architecture, providing implementation details, explaining the user interface and presenting the findings of a user study conducted to assess the system’s result quality.
-
 \chapter{Literature Review}
-The automatic identification and extraction of future-related information from text documents has been an active area of research for over 20 years. Baeza-Yates \cite{BaezaYatesSearchingTF} firstly formalized the problem of "future retrieval". Since then, many different methodologies have been developed. A very simple but common approach that can be found throughout early literature is to use a time-tagger or predefined temporal expressions in search engine-queries to obtain future-related data \cite{chronoseeker, supportingAnalysis, analyzingCollective, rankingRelated, extractingCollective}. Due to this approach being dependent on a fixed set of hand crafted rules, the data obtained this way isn't very diverse and is therefore often only used for initial data collection. This future-related data is typically analyzed for characteristic properties \cite{improvingRetrieval}, which are then used to construct features for training a classifier \cite{computationalExploration}. For instance \cite{automaticExtraction} extracts morphosemantic patterns from the data and uses them as features for classification. \cite{extractingPredictive} learns to classify clauses in a sentence as being future-related or not, by constructing features from POS tags, word co-occurrences, and common keywords. To determine the class of the whole sentence, the contained, classified clauses are used and the sentence structure is analyzed. Again features are built from this data and a classifier is trained to classify the whole sentence. There are also systems that use past data to predict the likelihood of future events occurring \cite{miningTheWeb, predictingTheNews}.
 
-A lot of research regarding clustering and ranking of content to construct a timeline was done in the area of Timeline Summarization. Recent approaches there include representing sentences as tf.idf-vectors or SBERT embeddings and clustering them via Affinity Propagation \cite{abstractiveTimeline, multitimeline} or Markov Clustering \cite{stateOfTheArtTimeline}.
-The ranking of sentences is usually done by mapping sentences to vectors and determining their similarity to the centroid vector \cite{stateOfTheArtTimeline} or scoring them based on specific metrics like date-importance and informativeness \cite{abstractiveTimeline} or sentence-importance and burstiness \cite{queryBased}.
+\section{Future Information Retrieval}
+The field of information retrieval has made substantial progress in the last few decades, particularly in the context of future-oriented information retrieval and prediction. A notable beginning was marked by the visionary paper *Future Retrieval: A System for Predictive Information Search* (1990), which pioneered the concept of extracting temporal information from news sources and combining it with standard full-text retrieval to answer queries that integrate text and time. The paper's main contribution is defining the future retrieval problem and demonstrating its practicality through initial experiments and probabilistic models. \\
 
-In our work, we gather data manually, instead of using pre-defined queries or a temporal tagger, which enables us to accumulate a novel and more diverse dataset of future-related sentences. Our approach utilizes the power of language models for classificaton, clustering and ranking, to construct an intuitive end-to-end system.
+The methods for future Information Retrieval that followed, relied on time-taggers and predefined temporal expressions to extract data.
+For example the year 2000 brought a temporal tagger (*Robust Temporal Processing of News*), that identified temporal expressions from text, tailored to news. It used hand-crafted rules as well as some machine learning to identify time expressions and assign normalized values.
+
+The *ChronoSeeker system* also utilizes a rule-based approach to identify future-related sentences by employing chrono words (specific patterns and keywords typical of future-oriented sentences) combined with future years (e.g., "by the year 2040," "2010-2050") to formulate search queries. Sentences containing these chrono words are filtered from web pages and used to extract features for training a machine learning model that can accurately detect future-related sentences.
+A similar approach was followed in *Analyzing Collective View of Future, Time-Referenced Events on the Web* , where future-related sentences are identified using regular expressions like: temp\_modifier+(the)year(s)+yyyy, which would match sentences like “In the year yyyy ...” or “... by the year yyyy.” 
+*Ranking Related News Predictions* is another approach that uses hand crafted rules, this time with the TARSQI toolkit which extracts temporal expressions from documents. \\
+
+Several studies have extended the traditional approach by analyzing obtained future-related sentences for distinctive characteristics and then doing classification based on those.
+
+*Improving Retrieval of Future-Related Information in Text Collections* for example took an approach focusing on retrieving time-referenced and time-unreferenced predictions from text collections. Particularly the latter one is challenging as one has to move beyond rule-based methods for detection. The approach involves assembling document collections that represent past and future references. Then characteristic terms are identified that are prevalent in these collections. When analyzing a sentence, its classification as future-related or not is determined based on the presence of these characteristic terms.
+
+*Computational Exploration of the Linguistic Structures of Future-Oriented Expression: Classification and Categorization* uses a combination of constituency grammar parsing, n-gram features, and 39 predefined syntactic rules to form features used to train an ADAGRAD classifier for detecting future-oriented sentences. *Automatic Extraction of References to Future Events from News Articles Using Semantic and Morphological Information* uses morphosemantic patterns as features, while *Extracting Predictive Statements with Their Scope from News Articles* classified clauses using features like POS tags and word co-occurrences to determine if a sentence refers to the future. Semantic role labeling was also employed for this purpose in *A Method for Extraction of Future Reference Sentences Based on Semantic Role  Labeling* \\
+
+Some systems employed a predictive approach that analyzed past data to forecast future events.
+
+*Predicting the News of Tomorrow Using Patterns in Web Search Queries* introduced PROFET, a method leveraging large-scale web resources like Google Trends to predict 100 terms that would dominate news headlines up to a week ahead. It underscored the potential of utilizing user search behavior as a predictive tool for future events.
+The paper *Mining the Web to Predict Future Events* also analyzes historical news data to forecast significant occurrences in the future. News stories spanning over two decades were analyzed to extract event sequences. These sequences were then clustered together based on their shared topics using topic tracking algorithms. This resulted in the construction of event storylines. The storylines were then enriched with factual data from the web.
+
+\section{Timeline Summarization}
+In the timeline summarization line of research, which is also related to our study, content is grouped and ranked to form a timeline. For this there have also been multiple different approaches over the years. \\
+
+*Automatic Generation of Overview Timelines (2000)* introduces a model for automatically creating timelines from text corpora. The process starts with extracting named entities and noun phrases from the timestamped articles. A chi-square test assesses the significance of term occurrences. Peaks are identified by finding runs of days with high chi-square scores. Terms with overlapping peak date ranges are clustered, representing related topics or events. Each cluster is labeled using the most prominent named entity and noun phrase. The clustering evaluation reveals disagreements on what constitutes a "topic".
+
+The method proposed in *"Extracting Collective Expectations about the Future from Large Text Collections"* employs a time-tagger to identify and normalize temporal expressions in news articles. A probability distribution is assigned to each temporal expression to represent the uncertainty associated with the future event implied by the detected temporal expression. Subsequently, each sentence along with its corresponding temporal expression is represented as a bag of words and the assigned probability distribution. These representations are then clustered using a Gaussian Mixture Model to group similar future events based on their textual content and similar probability distributions.
+
+*Temporal Summaries of News Topics* presented an approach to generate summaries that capture key events within a news topic over time, using probabilistic models for "novelty" and "usefulness". It showed that simple probabilistic models performed reasonably well, but not dramatically better than baseline models. *Query Based Event Extraction along a Timeline* further refined this concept by extracting sentences relevant to a query and placing them along a timeline based on their publication date. At each date the top N sentences are selected using special probabilistic measures like "interest" and "burstiness".
+
+In the paper *Timeline Generation through Evolutionary Trans-Temporal Summarization,*  a new technique for Evolutionary Trans-Temporal Summarization is presented. It addresses the challenge of tracking the progression of news stories over time. Key steps include gathering time-stamped web documents, analyzing sentence dependencies within and across dates by using models for affinity and diversity among sentences to calculate their global and local ranking scores using DivRank (a variation of the PageRank algorithm). These scores help in constructing a ranking for sentences that are most important across the entire timeline and within individual dates. Based on the ranking, the most relevant sentences are selected to represent key points in the news evolution. \\
+
+The first abstractive approach to timeline summarization came with *Abstractive Timeline Summarization*. Instead of identifying important sentences from a corpus and copying them directly into a timeline, this approach generates new sentences that combine information from various sources. It does this by first clustering sentences into topics using Affinity Propagation. The most frequently occurring date in each cluster is identified as the cluster's representative date. For each cluster, candidate summary sentences are generated using Multi-Sentence Compression, which fuses information from multiple sentences into a single sentence. The candidate sentences are then ranked based on date relevance, informativeness and linguistic quality. The top-ranked sentences are selected greedily to form the timeline summary. \\
+
+More recently Multi-Timeline Summarization developments improve upon standard timeline summarization methods by generating multiple, high-quality and diverse timelines that summarize different stories. *Multi-TimeLine Summarization (MTLS): Improving Timeline Summarization by Generating Multiple Summaries* proposed an unsupervised method that clusters SBERT embeddings through Affinity Propagation to detect events. This is followed by the selection of important events. Events that frequently co-occur and reference each other are identified in an event linking step and will form their own timeline. For each timeline, only the exemplar sentence is taken from each constituent event and the top 3 frequent non-stop words in each timeline are extracted to characterize the timeline topic.
+
+
 
 \chapter{Dataset}
 A classifier should be developed that is capable of accurately classifying sentences as either future-related or non-future-related. The classifier should be implemented in the form of a neural network. For these types of models to perform well, they have to be trained on a lot of data. Another thing to consider is that a neural network is only as good as its training data because it can only learn from the data it is given. 
@@ -648,7 +672,7 @@ So by choosing Vue, a simple and efficient development process was implemented, 
 In this section, we will delve into the planning and design of the user interface.
 
 \subsubsection{Design Workflow}
-Before implementing the HTML/CSS layout, the UI was initially conceptualized and designed using Photoshop. This workflow allowed for a quick visualization of the ideas before investing time into their actual implementation, which can be a more time-consuming process. Figure XY showcases a comparison between a Photoshop draft and its final implementation.
+Before implementing the HTML/CSS layout, the UI was initially conceptualized and designed using Photoshop. This workflow allowed for a quick visualization of the ideas before investing time into their actual implementation, which can be a more time-consuming process. %Figure XY showcases a comparison between a Photoshop draft and its final implementation.
 
 
 \subsubsection{Settings and Input}
@@ -737,15 +761,9 @@ Finally, the processed sentences are stored back into the database, ensuring a c
 
 \subsection{Classification Implementation}
 After the articles are split up into sentences and subjected to preprocessing, the classification step itself is executed. This process takes place remotely using Google Colab, due to its ability to offer high-speed GPU processing capabilities. This proves to be important for the web application's online inference requirement, demanding optimal speed.
-
 Google Colab becomes even more appealing due to the availability of XYZ GPUs, enhancing performance without any associated costs. Yet, it's important to acknowledge a limitation - the webapp is only functional when the Colab notebook is running. Thus the accessibility of the service is restricted and can therefore only be used for demonstration and development purposes.
-
-However in the future the Colab server can be substituted by a web server that has fast GPUs and has better availability quite easily.
-
 However, as time progresses, there is a potential to replace the Colab server with a web server that has fast GPUs and offers better availability.
-
 The implementation of the DistilRoBERTa model, augmented with a finetuning network, was orchestrated using the efficiency of PyTorch Lightning. This framework simplified the training trajectory by minimizing redundant code, simplifying tasks like data loading and model training.
-
 After classification, sentences that carry a model confidence level exceeding 0.8 are stored within a designated database table, ready for the subsequent clustering phase.
 
 \subsection{Clustering Implementation}
@@ -789,28 +807,26 @@ Overall, the integration of the frontend and backend components, along with the 
 
 In this chapter, we have explored the detailed implementation of the frontend and backend components of the web application. The utilization of Vue3, ApexCharts, Django, MySQL, and the Colab instance ensures a robust and efficient system that seamlessly integrates user queries, data processing, classification, clustering, and visualization. This comprehensive implementation forms the foundation of the web application, allowing users to explore and understand future-related content within a temporal context.
 
+\chapter{Evaluation and Limitations}
 
-%- as already mentioned the end goal of this project is to have a web application, where a user can input 
+\section{Evaluation}
 
-%I am writing a bachelors thesis where the goal is to have a webapp, where the user can input some query (eg. elon musk), then thousands of articles are downloaded from the internet through some api, preprocessed and split into sentences. those sentences are then fed into distilroberta which is finetuned to detect if the sentence has some future related content. then the future related sentences are clustered into topics with bertopic, and timetagged. the website features a timeline where the sentences that have temporal expressions in them are plotted and under the timeline is a word-cloud with all the topics with the sentences that have no temporal expressions inside them.
+To assess the effectiveness of our system, we developed a six-task exercise and presented it to six users of varying age and technical affinity. Each user had to complete the exercise with one of three entities. These tasks were designed to examine the timeline and word cloud components. The tasks included: 1) summarizing the entity's future outlook, 2) determining which topic and date have the highest/lowest relevance and analyzing the overall ranking, 4) engaging with the timeline to find incorrectly resolved temporal expressions, 5) summarizing the content of the most relevant word cloud, 6)~ examining the word clouds for duplicate content and 7) examining both components for sentences without future-related~ content.
 
-%- i have explained all models I used in this project (preprocessing, distilroberta, bertopic, timetagger)
-%- now i have a chapter called "Frontend and Backend Implementation"
-  %- there I want to go into detail how I structured the frontend and the backend and go into all the design choices and so on
+The users provided lengthy summaries, implying a wide range of predictions for upcoming years. The color-coding of datapoints managed to successfully convey relevance, but users noticed that nearer predictions were generally marked as more relevant, while key distant predictions often had lower relevance scores. Some users found this to be a problem, as distant events are often more significant and require more time to unfold. The time-tagging was generally accurate but struggled with some past predictions like \textit{"In 2019, he correctly predicted that a pandemic would occur by the end of the year"}. This is because the tagger resolves temporal expressions relative to the parent article's publishing date, and does not understand that \textit{"in 2019"} should be the anchor date in this sentence. Some users found similar sentences in the same cluster, but the information they provided was slightly different. This provided additional context, which was well-received.
 
-%- Frontend: vue3 with apexcharts for the timeline and axios for http-requests
-%- Backend: implemented with django, mysql and the classifier, clustering and tagging are run on a google colab instance due to necessary compute (django does a http request to a server in a running colab notebook)
+Overall, the system received strong approval from its users. On a five-star scale, the topic and classification quality received an average rating of 4 stars, while time-tagging quality received 3 stars. The ranking was evaluated at 3.5 stars, and the visualization received a 4.5-star average. Users were particularly satisfied with the ability of the system to provide information about an entity's future plans, events, and decisions. However, the biggest critique was the system's speed, especially the time it takes to retrieve the initial results. 
 
-%- could you please write this chapter out for me?
-  %- it should span about 10 a4 pages
-  %- also find a better heading for it
+\section{Limitations}
+The system's primary limitation is speed. While data is processed in smaller batches to achieve faster initial results, full parallelization is not possible due to the need for clustering and postprocessing on the entire dataset, resulting in a workflow bottleneck. 
+Furthermore, SUTime sometimes encounters issues with ambiguous references. For instance, it interprets 'on Tuesday' as referring to the future in contexts where it pertains to a past event. 
+Additionally, some collected predictions can be outdated, and to mitigate this one could consider publication dates of future-related content as done in \cite{yusuke}. 
 
-\chapter{User Evaluation}
-\textbf{TODO}
-
+\chapter{Conclusion}
+In this work we have developed an approach and implemented a working system for extracting and visualizing future events on timelines for user queries. By developing a multi-source dataset of 6,800 labeled sentences, we fine-tuned a DistilRoBERTa model to identify future references. We then used BERTopic for topic modeling and SUTime for time-tagging to extract topics from the data and detect and resolve temporal expressions. A dedicated postprocessing step improved cluster quality and ranked sentences according to their relevance. We also designed an intuitive interface that presents the results with an interactive timeline and word clouds. A user study confirmed the system's ability to offer a detailed overview of the future, while also highlighting potential areas for improvement, especially speed.
 
 
-\bibliographystyle{unsrt}% the recommended bibstyle
+\bibliographystyle{unsrt}
 %\bibliography{literature}
 \bibliography{sample-base}
 
