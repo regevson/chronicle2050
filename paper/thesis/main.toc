@@ -1,87 +1,83 @@
 \contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Future Information Retrieval}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Timeline Summarization}{6}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Dataset}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Sources of Dataset}{7}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}LONGBETS}{7}{subsection.3.1.1}%
-\contentsline {subsubsection}{Analysis of the dataset}{8}{section*.2}%
-\contentsline {subsection}{\numberline {3.1.2}Horizons}{8}{subsection.3.1.2}%
-\contentsline {subsubsection}{Analysis of the dataset}{9}{section*.3}%
-\contentsline {subsection}{\numberline {3.1.3}ChatGPT}{9}{subsection.3.1.3}%
-\contentsline {subsubsection}{ChatGPT for Training Data Generation}{9}{section*.4}%
-\contentsline {subsubsection}{Generating Future-related Sentences with ChatGPT}{9}{section*.5}%
-\contentsline {subsection}{\numberline {3.1.4}News}{10}{subsection.3.1.4}%
-\contentsline {section}{\numberline {3.2}Annotation of Future-related Sentences}{10}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Finetuned RoBERTa Classifier}{11}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Transformer Architecture}{11}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Self-Attention}{11}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Multi-Head Self-Attention}{12}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}BERT}{12}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Background and Motivation}{13}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Architecture and Inner Workings}{13}{subsection.4.2.2}%
-\contentsline {subsubsection}{Tokenization}{13}{section*.6}%
-\contentsline {subsubsection}{Neural Network Architecture}{14}{section*.7}%
-\contentsline {subsection}{\numberline {4.2.3}Pre-training}{14}{subsection.4.2.3}%
-\contentsline {subsubsection}{Masked Language Modeling}{14}{section*.8}%
-\contentsline {subsubsection}{Next Sentence Prediction}{15}{section*.9}%
-\contentsline {subsubsection}{Pretraining Data}{15}{section*.10}%
-\contentsline {subsection}{\numberline {4.2.4}Fine-tuning}{15}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Evaluation and Performance}{16}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}RoBERTa: Robustly Optimized BERT Pretraining Approach}{16}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Pre-training}{16}{subsection.4.3.1}%
-\contentsline {subsubsection}{Dynamic Masked Language Modeling}{16}{section*.11}%
-\contentsline {subsubsection}{Necessity of Next Sentence Prediction}{17}{section*.12}%
-\contentsline {subsubsection}{Effect of Batch Size on Model Performance}{17}{section*.13}%
-\contentsline {subsubsection}{Larger Byte-level Byte-Pair Encoding}{17}{section*.14}%
-\contentsline {subsubsection}{Expansion of Pretraining Data}{17}{section*.15}%
-\contentsline {subsection}{\numberline {4.3.2}Evaluation and Performance}{17}{subsection.4.3.2}%
-\contentsline {section}{\numberline {4.4}DistilRoBERTa}{18}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Knowledge Distillation}{18}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}DistilRoBERTa Specifications}{18}{subsection.4.4.2}%
-\contentsline {section}{\numberline {4.5}Finetuned DistilRoBERTa For Binary Future-related Sentence Classification}{18}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Optimized Tokenization for Reduced Complexity}{18}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}Mean-Pooling the DistilRoBERTa Outputs}{18}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Feed Forward Fine-Tuning Network}{19}{subsection.4.5.3}%
-\contentsline {subsubsection}{Training Insights}{19}{section*.16}%
-\contentsline {subsubsection}{Validation Insights}{20}{section*.17}%
-\contentsline {subsubsection}{Inference}{20}{section*.18}%
-\contentsline {subsection}{\numberline {4.5.4}Implementation}{21}{subsection.4.5.4}%
-\contentsline {chapter}{\numberline {5}Topic Modeling}{22}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Shortcomings of Conventional Models}{22}{section.5.1}%
-\contentsline {section}{\numberline {5.2}BERTopic}{22}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Document Embeddings}{23}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Document Clustering}{23}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Topic Representation}{23}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Configuration of BERTopic for Future-related Sentence Clustering}{23}{subsection.5.2.4}%
-\contentsline {chapter}{\numberline {6}Temporal Expression Identification and Extraction}{25}{chapter.6}%
-\contentsline {section}{\numberline {6.1}SUTime - Temporal Tagger}{25}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Inner Workings}{25}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Limitations}{26}{subsection.6.1.2}%
-\contentsline {subsection}{\numberline {6.1.3}Comparative Analysis of SUTime Against Other Temporal Tagging Systems}{26}{subsection.6.1.3}%
-\contentsline {chapter}{\numberline {7}System Implementation and Architecture}{27}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Frontend Implementation}{27}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Frontend Framework Selection}{27}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}UI Design and Layout}{27}{subsection.7.1.2}%
-\contentsline {subsubsection}{Design Workflow}{28}{section*.19}%
-\contentsline {subsubsection}{Settings and Input}{28}{section*.20}%
-\contentsline {subsubsection}{Statistics}{28}{section*.21}%
-\contentsline {subsubsection}{Timeline Visualization}{28}{section*.22}%
-\contentsline {paragraph}{Axes}{28}{section*.23}%
-\contentsline {paragraph}{Datapoints}{28}{section*.24}%
-\contentsline {subsubsection}{Word Cloud Visualization}{28}{section*.25}%
-\contentsline {subsubsection}{Log Visualization}{29}{section*.26}%
-\contentsline {subsubsection}{Charting Library}{29}{section*.27}%
-\contentsline {subsection}{\numberline {7.1.3}Interaction with the Backend}{29}{subsection.7.1.3}%
-\contentsline {section}{\numberline {7.2}Backend Implementation}{29}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Django Framework}{29}{subsection.7.2.1}%
-\contentsline {subsection}{\numberline {7.2.2}Article Downloading Implementation}{30}{subsection.7.2.2}%
-\contentsline {subsection}{\numberline {7.2.3}Preprocessing Implementation}{30}{subsection.7.2.3}%
-\contentsline {subsection}{\numberline {7.2.4}Classification Implementation}{30}{subsection.7.2.4}%
-\contentsline {subsection}{\numberline {7.2.5}Clustering Implementation}{30}{subsection.7.2.5}%
-\contentsline {subsection}{\numberline {7.2.6}Time Tagging Implementation}{31}{subsection.7.2.6}%
-\contentsline {section}{\numberline {7.3}System Architecture}{31}{section.7.3}%
-\contentsline {chapter}{\numberline {8}Evaluation and Limitations}{32}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Evaluation}{32}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Limitations}{32}{section.8.2}%
-\contentsline {chapter}{\numberline {9}Conclusion}{33}{chapter.9}%
+\contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Future Information Retrieval}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Timeline Summarization}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Dataset}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Sources of Dataset}{6}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}LONGBETS}{6}{subsection.3.1.1}%
+\contentsline {subsubsection}{Analysis of the dataset}{7}{section*.2}%
+\contentsline {subsection}{\numberline {3.1.2}Horizons}{7}{subsection.3.1.2}%
+\contentsline {subsubsection}{Analysis of the dataset}{8}{section*.3}%
+\contentsline {subsection}{\numberline {3.1.3}ChatGPT}{8}{subsection.3.1.3}%
+\contentsline {subsubsection}{ChatGPT for Training Data Generation}{8}{section*.4}%
+\contentsline {subsubsection}{Generating Future-related Sentences with ChatGPT}{8}{section*.5}%
+\contentsline {subsection}{\numberline {3.1.4}News}{9}{subsection.3.1.4}%
+\contentsline {section}{\numberline {3.2}Annotation of Future-related Sentences}{9}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Finetuned RoBERTa Classifier}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Transformer Architecture}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Self-Attention}{10}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Multi-Head Self-Attention}{11}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}BERT}{11}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Background and Motivation}{12}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Architecture and Inner Workings}{12}{subsection.4.2.2}%
+\contentsline {subsubsection}{Tokenization}{12}{section*.6}%
+\contentsline {subsubsection}{Neural Network Architecture}{13}{section*.7}%
+\contentsline {subsection}{\numberline {4.2.3}Pre-training}{13}{subsection.4.2.3}%
+\contentsline {subsubsection}{Masked Language Modeling}{13}{section*.8}%
+\contentsline {subsubsection}{Next Sentence Prediction}{14}{section*.9}%
+\contentsline {subsubsection}{Pretraining Data}{14}{section*.10}%
+\contentsline {subsection}{\numberline {4.2.4}Fine-tuning}{14}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Evaluation and Performance}{15}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}RoBERTa: Robustly Optimized BERT Pretraining Approach}{15}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Pre-training}{15}{subsection.4.3.1}%
+\contentsline {subsubsection}{Dynamic Masked Language Modeling}{15}{section*.11}%
+\contentsline {subsubsection}{Necessity of Next Sentence Prediction}{16}{section*.12}%
+\contentsline {subsubsection}{Effect of Batch Size on Model Performance}{16}{section*.13}%
+\contentsline {subsubsection}{Expansion of Pretraining Data}{16}{section*.14}%
+\contentsline {subsection}{\numberline {4.3.2}Evaluation and Performance}{16}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}DistilRoBERTa}{17}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Knowledge Distillation}{17}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}DistilRoBERTa Specifications}{17}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Finetuned DistilRoBERTa For Binary Future-related Sentence Classification}{17}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Optimized Tokenization for Reduced Complexity}{17}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Mean-Pooling the DistilRoBERTa Outputs}{17}{subsection.4.5.2}%
+\contentsline {subsection}{\numberline {4.5.3}Feed Forward Fine-Tuning Network}{18}{subsection.4.5.3}%
+\contentsline {subsubsection}{Training Details}{18}{section*.15}%
+\contentsline {subsubsection}{Validation Details}{19}{section*.16}%
+\contentsline {subsubsection}{Inference}{19}{section*.17}%
+\contentsline {chapter}{\numberline {5}Topic Modeling}{20}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Shortcomings of Conventional Models}{20}{section.5.1}%
+\contentsline {section}{\numberline {5.2}BERTopic}{20}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Document Embeddings}{21}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Document Clustering}{21}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Topic Representation}{21}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Configuration of BERTopic for Future-related Sentence Clustering}{21}{subsection.5.2.4}%
+\contentsline {chapter}{\numberline {6}Temporal Expression Identification and Extraction}{23}{chapter.6}%
+\contentsline {section}{\numberline {6.1}SUTime - Temporal Tagger}{23}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Inner Workings}{23}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Limitations}{24}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Comparative Analysis of SUTime Against Other Temporal Tagging Systems}{24}{subsection.6.1.3}%
+\contentsline {chapter}{\numberline {7}System Implementation and Architecture}{25}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Frontend Implementation}{25}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Frontend Framework Selection}{25}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}UI Design and Layout}{26}{subsection.7.1.2}%
+\contentsline {subsubsection}{Design Workflow}{26}{section*.18}%
+\contentsline {subsubsection}{Settings and Input}{26}{section*.19}%
+\contentsline {subsubsection}{Timeline Visualization}{26}{section*.20}%
+\contentsline {paragraph}{Axes}{26}{section*.21}%
+\contentsline {paragraph}{Datapoints}{26}{section*.22}%
+\contentsline {subsubsection}{Word Cloud Visualization}{26}{section*.23}%
+\contentsline {subsubsection}{Charting Library}{27}{section*.24}%
+\contentsline {subsection}{\numberline {7.1.3}Interaction with the Backend}{27}{subsection.7.1.3}%
+\contentsline {section}{\numberline {7.2}Backend Implementation}{27}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Django Framework}{27}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Article Downloading Implementation}{27}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Preprocessing Implementation}{28}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}Classification Implementation}{28}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Clustering Implementation}{28}{subsection.7.2.5}%
+\contentsline {subsection}{\numberline {7.2.6}Time Tagging Implementation}{29}{subsection.7.2.6}%
+\contentsline {section}{\numberline {7.3}System Architecture}{29}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Evaluation and Limitations}{30}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Evaluation}{30}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Limitations}{30}{section.8.2}%
+\contentsline {chapter}{\numberline {9}Conclusion}{31}{chapter.9}%

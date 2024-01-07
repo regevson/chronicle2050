@@ -1,3 +1,220 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{BaezaYatesSearchingTF}
+Ricardo Baeza-Yates.
+\newblock Searching the future.
+\newblock In {\em SIGIR Workshop MF/IR}, volume~5, 2005.
+
+\bibitem{ManiRobustTP}
+Inderjeet Mani and George Wilson.
+\newblock Robust temporal processing of news.
+\newblock In {\em Proceedings of the 38th Annual Meeting of the Association for Computational Linguistics}, pages 69--76, Hong Kong, October 2000. Association for Computational Linguistics.
+
+\bibitem{KawaiChronoseeker}
+Hideki Kawai, Adam Jatowt, Katsumi Tanaka, Kazuo Kunieda, and Keiji Yamada.
+\newblock {{ChronoSeeker}}: {{Search}} engine for future and past events.
+\newblock In {\em Proc. of the 4th ICUIMC}, {{ICUIMC}} '10. {Association for Computing Machinery}.
+
+\bibitem{JatowtAnalyzingCollective}
+Adam Jatowt, Hideki Kawai, Kensuke Kanazawa, Katsumi Tanaka, Kazuo Kunieda, and Keiji Yamada.
+\newblock Analyzing collective view of future, time-referenced events on the web.
+\newblock pages 1123--1124, 04 2010.
+
+\bibitem{KanhabuaRanking}
+Nattiya Kanhabua, Roi Blanco, and Michael Matthews.
+\newblock Ranking related news predictions.
+\newblock In {\em Proc. of the 34th {{ACM SIGIR}}}, {{SIGIR}} '11, pages 755--764. {Association for Computing Machinery}.
+
+\bibitem{KanazawaImproving}
+Kensuke Kanazawa, Adam Jatowt, and Katsumi Tanaka.
+\newblock Improving retrieval of future-related information in text collections.
+\newblock In {\em {{IEEE}}/{{WIC}}/{{ACM}} 2011}, volume~1, pages 278--283.
+
+\bibitem{NiComputationalExploration}
+Aiming Ni, Jinho~D. Choi, Jason Shepard, and P.~Wolff.
+\newblock Computational exploration to linguistic structures of future: {{Classification}} and categorization.
+\newblock In {\em North American Chapter of the Association for Computational Linguistics}.
+
+\bibitem{NakajimaAutomaticExtraction}
+Yoko Nakajima.
+\newblock Automatic extraction of references to future events from news articles using semantic and morphological information.
+\newblock In {\em Proc. of the 24th IJCAI}, {{IJCAI}}'15, pages 4385--4386. {AAAI Press}.
+
+\bibitem{YarrabellyExtractingPredictive}
+Navya Yarrabelly and K.~Karlapalem.
+\newblock Extracting predictive statements with their scope from news articles.
+\newblock In {\em ICWSM}.
+
+\bibitem{NakajimaMethod}
+Yoko Nakajima, Michal Ptaszynski, Hirotoshi Honma, and Fumito Masui.
+\newblock A method for extraction of future reference sentences based on semantic role labeling.
+\newblock {\em {IEICE} Trans. Inf. Syst.}, 99-D(2):514--524, 2016.
+
+\bibitem{RadinskyPredictingTheNews}
+Kira Radinsky, Sagie Davidovich, and Shaul Markovitch.
+\newblock Predicting the news of tomorrow using patterns in web search queries.
+\newblock In {\em IEEE/WIC/ACM 2008}, volume~1, pages 363--367.
+
+\bibitem{RadinskyMiningTheWeb}
+Kira Radinsky and Eric Horvitz.
+\newblock Mining the web to predict future events.
+\newblock In {\em Proc. of the 6th WSDM}, {{WSDM}} '13, pages 255--264. {Association for Computing Machinery}.
+
+\bibitem{SwanAutomaticGeneration}
+Russell Swan and James Allan.
+\newblock Automatic generation of overview timelines.
+\newblock In {\em Proceedings of the 23rd Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}, SIGIR '00, page 49–56, New York, NY, USA, 2000. Association for Computing Machinery.
+
+\bibitem{JatowtExtractingCollective}
+Adam Jatowt and Ching-man Au~Yeung.
+\newblock Extracting collective expectations about the future from large text collections.
+\newblock In {\em Proc. of the 20th CIKM}, pages 1259--1264. {ACM}.
+
+\bibitem{AllanTemporalSummaries}
+James Allan, Rahul Gupta, and Vikas Khandelwal.
+\newblock Temporal summaries of new topics.
+\newblock In {\em Proceedings of the 24th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}, SIGIR '01, page 10–18, New York, NY, USA, 2001. Association for Computing Machinery.
+
+\bibitem{ChieuQueryBasedEvent}
+Hai~Leong Chieu and Yoong~Keok Lee.
+\newblock Query based event extraction along a timeline.
+\newblock In {\em Proceedings of the 27th Annual International ACM SIGIR Conference on Research and Development in Information Retrieval}, SIGIR '04, page 425–432, New York, NY, USA, 2004. Association for Computing Machinery.
+
+\bibitem{YanTimelineGeneration}
+Rui Yan, Liang Kong, Congrui Huang, Xiaojun Wan, Xiaoming Li, and Yan Zhang.
+\newblock Timeline generation through evolutionary trans-temporal summarization.
+\newblock In Regina Barzilay and Mark Johnson, editors, {\em Proceedings of the 2011 Conference on Empirical Methods in Natural Language Processing}, pages 433--443, Edinburgh, Scotland, UK., July 2011. Association for Computational Linguistics.
+
+\bibitem{SteenAbstractiveTimeline}
+Julius Steen and Katja Markert.
+\newblock Abstractive timeline summarization.
+\newblock In {\em Proc. of the 2nd Workshop on New Frontiers in Summarization}, pages 21--31, Hong Kong, China, November 2019. Association for Computational Linguistics.
+
+\bibitem{YuMultiTimeline}
+Yi~Yu, Adam Jatowt, Antoine Doucet, Kazunari Sugiyama, and Masatoshi Yoshikawa.
+\newblock Multi-{{TimeLine}} summarization ({{MTLS}}): {{Improving}} timeline summarization by generating multiple summaries.
+\newblock In {\em Proc. of the 59th ACL and 11th IJCNLP}, pages 377--387. {Association for Computational Linguistics}.
+
+\bibitem{GoodfellowDeepLearning}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em Deep Learning}.
+\newblock MIT Press, 2016.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem{OpenAIChatGPT}
+OpenAI.
+\newblock Introducing chatgpt, 2023.
+\newblock Accessed: 2024-01-06.
+
+\bibitem{VaswaniAttentionIsAll}
+Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan~N. Gomez, Lukasz Kaiser, and Illia Polosukhin.
+\newblock Attention is all you need, 2023.
+
+\bibitem{LinSurvey}
+Tianyang Lin, Yuxin Wang, Xiangyang Liu, and Xipeng Qiu.
+\newblock A survey of transformers, 2021.
+
+\bibitem{bertArchi}
+Usama Khalid, Mirza~Omer Beg, and Muhammad~Umair Arshad.
+\newblock Rubert: A bilingual roman urdu bert using cross lingual transfer learning, 2021.
+
+\bibitem{bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding, 2018.
+\newblock cite arxiv:1810.04805Comment: 13 pages.
+
+\bibitem{wordpiece}
+Yonghui Wu, Mike Schuster, Zhifeng Chen, Quoc~V. Le, Mohammad Norouzi, Wolfgang Macherey, Maxim Krikun, Yuan Cao, Qin Gao, Klaus Macherey, Jeff Klingner, Apurva Shah, Melvin Johnson, Xiaobing Liu, Łukasz Kaiser, Stephan Gouws, Yoshikiyo Kato, Taku Kudo, Hideto Kazawa, Keith Stevens, George Kurian, Nishant Patil, Wei Wang, Cliff Young, Jason Smith, Jason Riesa, Alex Rudnick, Oriol Vinyals, Greg Corrado, Macduff Hughes, and Jeffrey Dean.
+\newblock Google's neural machine translation system: Bridging the gap between human and machine translation, 2016.
+
+\bibitem{bertMLM}
+James Briggs.
+\newblock Masked-language modeling with bert, 2021.
+\newblock Accessed: 2024-01-06.
+
+\bibitem{roberta}
+Yinhan Liu, Myle Ott, Naman Goyal, Jingfei Du, Mandar Joshi, Danqi Chen, Omer Levy, Mike Lewis, Luke Zettlemoyer, and Veselin Stoyanov.
+\newblock Roberta: A robustly optimized bert pretraining approach, 2019.
+
+\bibitem{OttScaling}
+Myle Ott, Sergey Edunov, David Grangier, and Michael Auli.
+\newblock Scaling neural machine translation.
+\newblock In Ond{\v{r}}ej Bojar, Rajen Chatterjee, Christian Federmann, Mark Fishel, Yvette Graham, Barry Haddow, Matthias Huck, Antonio~Jimeno Yepes, Philipp Koehn, Christof Monz, Matteo Negri, Aur{\'e}lie N{\'e}v{\'e}ol, Mariana Neves, Matt Post, Lucia Specia, Marco Turchi, and Karin Verspoor, editors, {\em Proceedings of the Third Conference on Machine Translation: Research Papers}, pages 1--9, Brussels, Belgium, October 2018. Association for Computational Linguistics.
+
+\bibitem{distilbert}
+Victor Sanh, Lysandre Debut, Julien Chaumond, and Thomas Wolf.
+\newblock Distilbert, a distilled version of bert: smaller, faster, cheaper and lighter, 2020.
+
+\bibitem{BucilDistil}
+Cristian Buciluundefined, Rich Caruana, and Alexandru Niculescu-Mizil.
+\newblock Model compression.
+\newblock In {\em Proceedings of the 12th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining}, KDD '06, page 535–541, New York, NY, USA, 2006. Association for Computing Machinery.
+
+\bibitem{HintonDistilling}
+Geoffrey Hinton, Oriol Vinyals, and Jeff Dean.
+\newblock Distilling the knowledge in a neural network, 2015.
+
+\bibitem{BleiLDA}
+David~M. Blei, Andrew~Y. Ng, and Michael~I. Jordan.
+\newblock Latent dirichlet allocation.
+\newblock {\em J. Mach. Learn. Res.}, 3(null):993–1022, mar 2003.
+
+\bibitem{TopToVec}
+Dimo Angelov.
+\newblock Top2vec: Distributed representations of topics.
+\newblock {\em CoRR}, abs/2008.09470, 2020.
+
+\bibitem{bertopic}
+Maarten Grootendorst.
+\newblock Bertopic: Neural topic modeling with a class-based tf-idf procedure, 2022.
+
+\bibitem{sbert}
+Nils Reimers and Iryna Gurevych.
+\newblock Sentence-bert: Sentence embeddings using siamese bert-networks, 2019.
+
+\bibitem{umap}
+Leland McInnes, John Healy, and James Melville.
+\newblock Umap: Uniform manifold approximation and projection for dimension reduction, 2020.
+
+\bibitem{hdbscan}
+Leland McInnes and John Healy.
+\newblock Accelerated hierarchical density based clustering.
+\newblock In {\em ICDMW2017}. {IEEE}, nov 2017.
+
+\bibitem{sutime}
+Angel~X. Chang and Christopher Manning.
+\newblock {SUT}ime: A library for recognizing and normalizing time expressions.
+\newblock In {\em Proc. of the 8th LREC'12)}, pages 3735--3740, Istanbul, Turkey, May 2012. European Language Resources Association (ELRA).
+
+\bibitem{gutime}
+Inderjeet Mani.
+\newblock Recent developments in temporal information extraction.
+\newblock In Nicolas Nicolov, Kalina Bontcheva, Galia Angelova, and Ruslan Mitkov, editors, {\em Recent Advances in Natural Language Processing III, Selected Papers from {RANLP} 2003, Borovets, Bulgaria}, volume 260 of {\em Current Issues in Linguistic Theory {(CILT)}}, pages 45--60. John Benjamins, Amsterdam/Philadelphia, 2003.
+
+\bibitem{heideltime}
+Jannik Str{\"{o}}tgen and Michael Gertz.
+\newblock Heideltime: High quality rule-based extraction and normalization of temporal expressions.
+\newblock In Katrin Erk and Carlo Strapparava, editors, {\em Proceedings of the 5th International Workshop on Semantic Evaluation, SemEval@ACL 2010, Uppsala University, Uppsala, Sweden, July 15-16, 2010}, pages 321--324. The Association for Computer Linguistics, 2010.
+
+\bibitem{trips}
+Naushad UzZaman and James~F. Allen.
+\newblock Trips and trios system for tempeval-2: Extracting temporal information from text.
+\newblock In {\em International Workshop on Semantic Evaluation}, 2010.
+
+\bibitem{vuejs}
+Evan You.
+\newblock The progressive javascript framework, 2024.
+\newblock Accessed: 2024-01-06.
+
+\bibitem{KernComparing}
+Katrin~A. Kern.
+\newblock Comparing modern front-end frameworks.
+\newblock Bachelor's thesis, Johannes Kepler University Linz, Linz, Austria, March 2022.
+\newblock Bachelor's Program in Computer Science.
+
+\bibitem{yusuke}
+Yusuke Yamamoto, Taro Tezuka, Adam Jatowt, and Katsumi Tanaka.
+\newblock Supporting judgment of fact trustworthiness considering temporal and sentimental aspects.
+\newblock In {\em Web Information Systems Engineering-WISE 2008: 9th International Conference, Auckland, New Zealand, September 1-3, 2008. Proceedings 9}, pages 206--220. Springer, 2008.
 
 \end{thebibliography}
