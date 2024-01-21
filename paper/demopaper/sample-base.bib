@@ -7,6 +7,24 @@
       primaryClass={cs.CL}
 }
 
+
+@inproceedings{jatowt2015mapping,
+  title={Mapping temporal horizons: Analysis of collective future and past related attention in Twitter},
+  author={Jatowt, Adam and Antoine, {\'E}milien and Kawai, Yukiko and Akiyama, Toyokazu},
+  booktitle={Proceedings of the 24th international conference on World Wide Web},
+  pages={484--494},
+  year={2015}
+}
+
+@inproceedings{yusuke,
+  title={Supporting judgment of fact trustworthiness considering temporal and sentimental aspects},
+  author={Yamamoto, Yusuke and Tezuka, Taro and Jatowt, Adam and Tanaka, Katsumi},
+  booktitle={Web Information Systems Engineering-WISE 2008: 9th International Conference, Auckland, New Zealand, September 1-3, 2008. Proceedings 9},
+  pages={206--220},
+  year={2008},
+  organization={Springer}
+}
+
 @misc{bertopic,
       title={BERTopic: Neural topic modeling with a class-based TF-IDF procedure},
       author={Maarten Grootendorst},
@@ -26,8 +44,6 @@
 }
 
 @inproceedings{hdbscan,
-	doi = {10.1109/icdmw.2017.12},
-	url = {https://doi.org/10.1109%2Ficdmw.2017.12},
 	year = 2017,
 	month = {nov},
 	publisher = {{IEEE}
@@ -46,7 +62,6 @@
     year = "2012",
     address = "Istanbul, Turkey",
     publisher = "European Language Resources Association (ELRA)",
-    url = "http://www.lrec-conf.org/proceedings/lrec2012/pdf/284_Paper.pdf",
     pages = "3735--3740",
     abstract = "We describe SUTIME, a temporal tagger for recognizing and normalizing temporal expressions in English text. SUTIME is available as part of the Stanford CoreNLP pipeline and can be used to annotate documents with temporal information. It is a deterministic rule-based system designed for extensibility. Testing on the TempEval-2 evaluation corpus shows that this system outperforms state-of-the-art techniques.",
 }
@@ -82,8 +97,6 @@
     year = "2020",
     address = "Online",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/2020.acl-main.122",
-    doi = "10.18653/v1/2020.acl-main.122",
     pages = "1322--1334",
     abstract = "Previous work on automatic news timeline summarization (TLS) leaves an unclear picture about how this task can generally be approached and how well it is currently solved. This is mostly due to the focus on individual subtasks, such as date selection and date summarization, and to the previous lack of appropriate evaluation metrics for the full TLS task. In this paper, we compare different TLS strategies using appropriate evaluation frameworks, and propose a simple and effective combination of methods that improves over the stateof-the-art on all tested benchmarks. For a more robust evaluation, we also present a new TLS dataset, which is larger and spans longer time periods than previous datasets.",
 }
@@ -98,8 +111,6 @@
   pages = {377--387},
   publisher = {{Association for Computational Linguistics}},
   location = {{Online}},
-  doi = {10.18653/v1/2021.acl-long.32},
-  url = {https://aclanthology.org/2021.acl-long.32},
   abstract = {In this paper, we address a novel task, Multiple TimeLine Summarization (MTLS), which extends the flexibility and versatility of Time-Line Summarization (TLS). Given any collection of time-stamped news articles, MTLS automatically discovers important yet different stories and generates a corresponding time-line for each story.To achieve this, we propose a novel unsupervised summarization framework based on two-stage affinity propagation. We also introduce a quantitative evaluation measure for MTLS based on previousTLS evaluation methods. Experimental results show that our MTLS framework demonstrates high effectiveness and MTLS task can give bet-ter results than TLS.}
 }
 
@@ -113,8 +124,6 @@
     year = "2019",
     address = "Hong Kong, China",
     publisher = "Association for Computational Linguistics",
-    url = "https://aclanthology.org/D19-5403",
-    doi = "10.18653/v1/D19-5403",
     pages = "21--31",
     abstract = "Timeline summarization (TLS) automatically identifies key dates of major events and provides short descriptions of what happened on these dates. Previous approaches to TLS have focused on extractive methods. In contrast, we suggest an abstractive timeline summarization system. Our system is entirely unsupervised, which makes it especially suited to TLS where there are very few gold summaries available for training of supervised systems. In addition, we present the first abstractive oracle experiments for TLS. Our system outperforms extractive competitors in terms of ROUGE when the number of input documents is high and the output requires strong compression. In these cases, our oracle experiments confirm that our approach also has a higher upper bound for ROUGE scores than extractive methods. A study with human judges shows that our abstractive system also produces output that is easy to read and understand.",
 }
@@ -140,8 +149,6 @@
   pages = {255--264},
   publisher = {{Association for Computing Machinery}},
   location = {{New York, NY, USA}},
-  doi = {10.1145/2433396.2433431},
-  url = {https://doi.org/10.1145/2433396.2433431},
   abstract = {We describe and evaluate methods for learning to forecast forthcoming events of interest from a corpus containing 22 years of news stories. We consider the examples of identifying significant increases in the likelihood of disease outbreaks, deaths, and riots in advance of the occurrence of these events in the world. We provide details of methods and studies, including the automated extraction and generalization of sequences of events from news corpora and multiple web resources. We evaluate the predictive power of the approach on real-world events withheld from the system.},
   isbn = {978-1-4503-1869-3},
   pagetotal = {10},
@@ -195,12 +202,27 @@
   publisher = {{Association for Computing Machinery}},
   location = {{New York, NY, USA}},
   doi = {10.1145/2108616.2108647},
-  url = {https://doi.org/10.1145/2108616.2108647},
   abstract = {In this paper, we propose an on-demand search engine called ChronoSeeker, which allows users to find past/future events based on their interest. Our goal is providing a search engine which can collect as many future/past events as possible relevant to user's query in obtaining various future scenarios considering both predictions and histories. Two technical issues are treated, (1) efficient search method for event information and (2) accurate filtering method for removing noises from search results. To search for event information effectively, our system expands a user query by some typical expressions related to event information such as year expressions, temporal modifiers and context terms. To remove noisy information, we selected five types of features for a machine learning technique to classify candidates into event information or not. Our experiment showed that filtering performance achieved an 85\% F-measure, and that query expansion can collect dozens of times more CEs than those without expansion.},
   articleno = {25},
   isbn = {978-1-60558-893-3},
   pagetotal = {10},
   keywords = {futurology,opinion analysis,vertical search}
+}
+
+@article{DBLP:journals/ieicet/NakajimaPHM16,
+  author       = {Yoko Nakajima and
+                  Michal Ptaszynski and
+                  Hirotoshi Honma and
+                  Fumito Masui},
+  title        = {A Method for Extraction of Future Reference Sentences Based on Semantic
+                  Role Labeling},
+  journal      = {{IEICE} Trans. Inf. Syst.},
+  volume       = {99-D},
+  number       = {2},
+  pages        = {514--524},
+  year         = {2016},
+  biburl       = {https://dblp.org/rec/journals/ieicet/NakajimaPHM16.bib},
+  bibsource    = {dblp computer science bibliography, https://dblp.org}
 }
 
 @inproceedings{supportingAnalysis,
@@ -210,8 +232,6 @@
   isbn = {9781605583228},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/1555400.1555420},
-  doi = {10.1145/1555400.1555420},
   abstract = {A lot of future-related information is available in news articles or Web pages. This information can however differ to large extent and may fluctuate over time. It is therefore difficult for users to manually compare and aggregate it, and to re-construct the most probable course of future events. In this paper we approach a problem of automatically generating summaries of future events related to queries using data obtained from news archive collections or from the Web. We propose two methods, explicit and implicit future-related information detection. The former is based on analyzing the context of future temporal expressions in documents, while the latter relies on detecting periodical patterns in historical document collections. We present a graph-based visualization of future-related information and demonstrate its usefulness through several examples.},
   booktitle = {Proc. of the 9th ACM/IEEE-CS Joint Conference on Digital Libraries},
   pages = {115–124},
@@ -222,9 +242,11 @@
 }
 
 @inproceedings{BaezaYatesSearchingTF,
-  title = {Searching the Future},
-  author = {Baeza-Yates, Ricardo A.},
-  date = {2005}
+  title={Searching the future},
+  author={Baeza-Yates, Ricardo},
+  booktitle={SIGIR Workshop MF/IR},
+  volume={5},
+  year={2005}
 }
 
 @inproceedings{analyzingCollective,
@@ -245,8 +267,6 @@ doi = {10.1145/1772690.1772835}
   pages = {755--764},
   publisher = {{Association for Computing Machinery}},
   location = {{New York, NY, USA}},
-  doi = {10.1145/2009916.2010018},
-  url = {https://doi.org/10.1145/2009916.2010018},
   abstract = {We estimate that nearly one third of news articles contain references to future events. While this information can prove crucial to understanding news stories and how events will develop for a given topic, there is currently no easy way to access this information. We propose a new task to address the problem of retrieving and ranking sentences that contain mentions to future events, which we call ranking related news predictions. In this paper, we formally define this task and propose a learning to rank approach based on 4 classes of features: term similarity, entity-based similarity, topic similarity, and temporal similarity. Through extensive evaluations using a corpus consisting of 1.8 millions news articles and 6,000 manually judged relevance pairs, we show that our approach is able to retrieve a significant number of relevant predictions related to a given topic.},
   isbn = {978-1-4503-0757-4},
   pagetotal = {10},
@@ -261,11 +281,20 @@ doi = {10.1145/1772690.1772835}
   pages = {1259--1264},
   publisher = {{ACM}},
   location = {{Glasgow Scotland, UK}},
-  doi = {10.1145/2063576.2063759},
-  url = {https://dl.acm.org/doi/10.1145/2063576.2063759},
   urldate = {2023-03-16},
   eventtitle = {{{CIKM}} '11: {{International Conference}} on {{Information}} and {{Knowledge Management}}},
   isbn = {978-1-4503-0717-8},
   langid = {english},
   keywords = {future-related information retrieval,temporal information}
+}
+
+@article{numNewsArticles,
+author = {Hamborg, Felix and Meuschke, Norman and Gipp, Bela},
+year = {2020},
+month = {06},
+pages = {},
+title = {Bias-aware news analysis using matrix-based news aggregation},
+volume = {21},
+journal = {International Journal on Digital Libraries},
+doi = {10.1007/s00799-018-0239-9}
 }

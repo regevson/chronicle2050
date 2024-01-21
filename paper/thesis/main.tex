@@ -1,45 +1,109 @@
-\documentclass[a4paper,10pt]{report}
-
-\setlength{\parindent}{0pt}
-
-\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\documentclass[12pt,oneside,bibtotoc,liststotoc]{scrbook}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
-\usepackage{hyperref}
+\usepackage{pdfpages}
+\usepackage{a4wide}
+\usepackage{parskip}
+\usepackage[bookmarks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[right]{eurosym}
+\usepackage{amsmath}
+\usepackage[toc,page]{appendix}
 \usepackage{afterpage}
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{multirow}
+\usepackage{longtable}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{makecell} % Include the makecell package
 
+\usepackage[numbers]{natbib}
+\DeclareUnicodeCharacter{2192}{ to}
 
+\usepackage{lstautogobble}
 
-% Title page information
-\title{Future Timelines: Extraction and Visualization of Future-Related Content From News Articles}
-\author{Juwal Regev}
-\date{\today} % Use \date{Specific Date} for a fixed date
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
 
+\pagestyle{headings}
+\setlength{\textwidth}{15cm}
+\setlength{\textheight}{22.5cm}
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{0cm}
 \begin{document}
 
-\maketitle
+\thispagestyle{empty}
+\begin{center}
+\LARGE{University of Innsbruck\\
+Faculty of Mathematics, Computer Science and Physics}\\[3ex]
+\large{Department of Computer Science}
+\end{center}
+\medskip
 
-\begin{abstract}
-In today's rapidly evolving world, maintaining a comprehensive overview of the future landscape is essential for staying competitive and making informed decisions. However, given the large volume of daily news, manually obtaining a thorough overview of an entity's future prospects is quite challenging. To address this, we present a system designed to automatically extract and summarize future-related information of a queried entity from news articles. Our approach utilizes a novel and publicly accessible multi-source dataset comprising 6,800 annotated sentences to fine-tune a language model to identify future-related sentences. We then use topic modeling to extract the main topics from the data and rank them by relevance as well as present them on an interactive timeline. User evaluations have shown that the timelines and summaries our system produces are useful. The system is available as a web application at: \url{https://chronicle2050.regevson.com}.
-\end{abstract}
+\begin{center}
+\includegraphics[width=3cm]{Logo}
+\vspace{1.5cm}
+
+\textbf{\LARGE{Bachelor's Thesis}}
+\medskip\par
+\textbf{\normalsize{submitted for the degree of}} \\[3ex]
+\textbf{\Large{Bachelor of Science}}
+\vspace{2cm}
+
+\textbf{\Large{Future Timelines: Extraction and Visualization of Future-related Content From News Articles}}
+\bigskip\par
+by \par
+\large{Juwal Regev}\\
+(Matr.-Nr.: 11944479)
+\end{center}
+\vspace{0.7cm}
+
+\begin{tabular}{ll}
+  Submission Date:  & \today \\
+  Supervisor: & Univ.-Prof. Adam Jatowt, PhD \\
+\end{tabular}
+
+\newpage
+
+\includepdf[noautoscale=true, width=\paperwidth]{img/eid_annotated.pdf}
+
+\renewcommand{\baselinestretch}{1.00}\normalsize
+
 
 \tableofcontents
+\setcounter{page}{1}
+\pagenumbering{Roman}
+
 \listoffigures
+\renewcommand{\baselinestretch}{1.5}\normalsize
+
 \listoftables
+\renewcommand{\baselinestretch}{1.5}\normalsize
+
+\newpage
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+In today's rapidly evolving world, maintaining a comprehensive overview of the future landscape is essential for staying competitive and making informed decisions. However, given the large volume of daily news, manually obtaining a thorough overview of an entity's future prospects is quite challenging. To address this, we present a system designed to automatically extract and summarize future-related information of a queried entity from news articles. Our approach utilizes a novel and publicly accessible multi-source dataset comprising 6,800 annotated sentences to fine-tune a language model to identify future-related sentences. We then use topic modeling to extract the main topics from the data and rank them by relevance as well as present them on an interactive timeline. User evaluations have shown that the timelines and summaries our system produces are useful. The system is available as a web application at: \url{https://chronicle2050.regevson.com}.
+
+
+
 
 % Chapters
 \chapter{Introduction}
 A vast amount of news articles is published on the web every single day. A significant amount of those articles contains information that is predictive or related to future events. Extracting and analyzing such information regarding a specific entity would offer a comprehensive overview of its future prospects. However doing this manually is not feasible as one would have to sift through the articles line by line, identifying nuanced references to the future.
 
-Furthermore, this would have to be done regularly so as to always have the most up-to-date information. Thus, it is clear that an automated system, capable of extracting, processing and visualizing this information is needed. This system would be beneficial in a variety of different fields. From analyzing predictions related to stock market movements, monitoring corporate developments as well as gaining insights into market trends and emerging technologies, the potential applications are limitless. 
+Furthermore, this would have to be done regularly so as to always have the most up-to-date information. Thus, it is clear that an automated system, capable of extracting, processing and visualizing this information is needed. This system would be beneficial in a variety of different fields. From analyzing predictions related to stock market movements, monitoring corporate developments as well as gaining insights into market trends and emerging technologies, the potential applications are limitless.
 \\\\
 To address this problem, a system was developed for extracting, summarizing, ranking and visualizing future-related content within news collections. It consists of five main components: 1) Data Retrieval and Preprocessing, 2) Classification, 3) Topic Modeling, 4) Postprocessing, 5) Time-Tagging. A visualization of the workflow can be seen in Figure \ref{fig:archi}.
 
-The process is initiated by a user providing an entity, whose future should be explored. The system then downloads and preprocesses thousands of news articles related to the provided entity. In the next step, a neural network classifier is employed to classify sentences as either being future-related or not. Following classification, these sentences are organized into distinct topics, which are then presented to the user in a segmented manner. 
+The process is initiated by a user providing an entity, whose future should be explored. The system then downloads and preprocesses thousands of news articles related to the provided entity. In the next step, a neural network classifier is employed to classify sentences as either being future-related or not. Following classification, these sentences are organized into distinct topics, which are then presented to the user in a segmented manner.
 
-Additionally, the topics are labeled with representative keywords that provide insight into the content of each cluster. To provide an even better overview, we incorporate a temporal perspective into the presentation of the results. We do this by analyzing the sentences for temporal expressions, extracting and normalizing them to a date and then mapping the sentences, ranked by their relevance, onto a timeline. 
+Additionally, the topics are labeled with representative keywords that provide insight into the content of each cluster. To provide an even better overview, we incorporate a temporal perspective into the presentation of the results. We do this by analyzing the sentences for temporal expressions, extracting and normalizing them to a date and then mapping the sentences, ranked by their relevance, onto a timeline.
 \\\\
 In the following chapters, we explore the system's components in detail, including their implementation details and the rationale behind the design decisions made. Our goal is to provide a comprehensive overview of the system, including the inner workings and theoretical foundations of the models employed.
 
@@ -62,14 +126,14 @@ Finally, Chapter 8 summarizes the evaluation of the system based on a user study
 \chapter{Literature Review}
 
 \section{Future Information Retrieval}
-The field of information retrieval has made substantial progress in the last few decades, particularly in the context of future-oriented information retrieval and prediction. A notable beginning was marked by the visionary paper \textit{Searching the future} (2005) \cite{BaezaYatesSearchingTF}, which pioneered the concept of extracting temporal information from news sources and combining it with standard full-text retrieval to answer queries that integrate text and time. The paper's main contribution is defining the future retrieval problem and demonstrating its practicality through initial experiments and probabilistic models. 
+The field of information retrieval has made substantial progress in the last few decades, particularly in the context of future-oriented information retrieval and prediction. A notable beginning was marked by the visionary paper \textit{Searching the future} (2005) \cite{BaezaYatesSearchingTF}, which pioneered the concept of extracting temporal information from news sources and combining it with standard full-text retrieval to answer queries that integrate text and time. The paper's main contribution is defining the future retrieval problem and demonstrating its practicality through initial experiments and probabilistic models.
 \\\\
 The methods for future information retrieval that followed, relied on time-taggers and predefined temporal expressions to extract data.
 For example the year 2000 brought a temporal tagger \cite{ManiRobustTP} that identified temporal expressions from text, tailored to news. It used hand-crafted rules as well as some machine learning to identify time expressions and assign normalized values.
 
 ChronoSeeker \cite{KawaiChronoseeker} also utilized a rule-based approach to identify future-related sentences by employing chrono words (specific patterns and keywords typical of future-oriented sentences) combined with future years (e.g., "by the year 2040," "2010-2050") to formulate search queries. Sentences containing these chrono words were filtered from web pages and were used to extract features for training a machine learning model that accurately detected future-related sentences.
-A similar approach was followed in \textit{Analyzing Collective View of Future, Time-Referenced Events on the Web} (2010) \cite{JatowtAnalyzingCollective}, where future-related sentences were identified using regular expressions like: temp\_modifier+(the)year(s)+yyyy, which would match sentences like “In the year yyyy ...” or “... by the year yyyy.” 
-\textit{Ranking Related News Predictions} (2011) \cite{KanhabuaRanking} also used hand crafted rules, this time with the TARSQI toolkit which extracts temporal expressions from documents. 
+A similar approach was followed in \textit{Analyzing Collective View of Future, Time-Referenced Events on the Web} (2010) \cite{JatowtAnalyzingCollective}, where future-related sentences were identified using regular expressions like: temp\_modifier+(the)year(s)+yyyy, which would match sentences like “In the year yyyy ...” or “... by the year yyyy.”
+\textit{Ranking Related News Predictions} (2011) \cite{KanhabuaRanking} also used hand crafted rules, this time with the TARSQI toolkit which extracts temporal expressions from documents.
 \\\\
 Several studies have extended the traditional approach by analyzing obtained future-related sentences for distinctive characteristics and then doing classification based on those.
 
@@ -100,7 +164,7 @@ More recently Multi-Timeline Summarization developments improve upon standard ti
 
 
 \chapter{Dataset}
-For our system to work, a classifier must be developed that is capable of accurately classifying sentences as either future-related or non-future-related. The classifier should be implemented in the form of a neural network. For these types of models to perform well, they have to be trained on a lot of data. Another thing to consider is that a neural network is only as good as its training data because it can only learn from the data it is given. 
+For our system to work, a classifier must be developed that is capable of accurately classifying sentences as either future-related or non-future-related. The classifier should be implemented in the form of a neural network. For these types of models to perform well, they have to be trained on a lot of data. Another thing to consider is that a neural network is only as good as its training data because it can only learn from the data it is given.
 
 That is why it's crucial that this data is diverse. When a network is trained on diverse data, it is exposed to different patterns within the data, which makes it understand the underlying structure and relationships better. \cite{GoodfellowDeepLearning} To make this concrete, it means that we should provide our network with sentences about different topics, with different words and different structures. That is why our approach to data gathering differs from traditional methods. As already seen, earlier strategies have frequently relied on extracting data using temporal expressions. However, this approach has its limitations. Predictions can often be intricate, lacking explicit dates or simple temporal cues. To address this, our dataset (which is publicly available\footnote{\url{https://github.com/regevson/chronicle2050}}) incorporates a rich variety of 6,800 manually labeled sentences. They have been collected from different sources without relying on specific queries, and therefore they exhibit unique lexical and structural features and contain a diverse set of topics. This enables our classifier to identify future-related content that does not contain standard temporal expressions hinting at future references.
 
@@ -130,22 +194,22 @@ Our data originates from four different sources. A detailed breakdown of them is
 
 \subsection{LONGBETS}
 First we looked for websites where users can make predictions about the future in the hopes of getting sentences from various different topics that give information about future events.
-\begin{figure}
+\begin{figure}[h]
   \centering
-  \includegraphics[height=10cm]{img/longbets.png}
+  \includegraphics[height=9cm]{img/longbets.png}
   \caption{Screenshot of the LONGBETS website.}
   \label{fig:longbets}
 \end{figure}
 Longbets\footnote{\url{https://longbets.org}} is a platform where users can make predictions about various topics of interest.
 The predictions on Longbets, spanning from realistic forecasts about politics and technology to more bizarre ones, extend all the way from the near future into the next century.
-On the website each prediction has to be summarized in one sentence. Additionally there is an option to give more context in the description section and even a possiblity to bet real money on the prediction.      
+On the website each prediction has to be summarized in one sentence. Additionally there is an option to give more context in the description section and even a possibility to bet real money on the prediction.
 In the following we see several examples of sentences that have been scraped. Figure \ref{fig:longbets} shows a screenshot of the website.
 \begin{itemize}
   \item \textit{"By 2030, commercial passengers will routinely fly in pilotless planes."}
   \item \textit{"Over the next ten years, we will make measurable global progress in all five areas of the human condition: food, access to clean water, health, education, and the price of energy."}
   \item \textit{"By 2029 no computer - or 'machine intelligence' - will have passed the Turing Test."}
 \end{itemize}
-    
+
 \subsubsection{Analysis of the dataset}
 Around one thousand predictions were obtained from Longbets. The majority of them is one sentence long.
 \begin{itemize}
@@ -153,7 +217,7 @@ Around one thousand predictions were obtained from Longbets. The majority of the
   \item 98\% of them contain \textit{"will"}
 \end{itemize}
 
-As we can see, this dataset does not meet the optimal criteria we established earlier, as it lacks the desirable attributes of diverse sentence structure and words. The majority of sentences have a structure like \textit{[... will ... -some date-]}. The content of the sentences does however represent different areas and topics.     
+As we can see, this dataset does not meet the optimal criteria we established earlier, as it lacks the desirable attributes of diverse sentence structure and words. The majority of sentences have a structure like \textit{[... will ... -some date-]}. The content of the sentences does however represent different areas and topics.
 To create a balanced dataset, one thousand negative sentences scraped from news articles were added. In order to maintain structural consistency with the positive sentences (which mostly contained dates), only negative sentences containing dates were selected.
 
 
@@ -165,7 +229,7 @@ To create a balanced dataset, one thousand negative sentences scraped from news 
   \caption{Screenshot of the Horizons website.}
   \label{fig:horizons}
 \end{figure}
-Horizons\footnote{\url{https://radar.envisioning.io/horizons}} is more focused on emerging technologies. It is an "interactive visualization tool for discovering and learning about the technologies affecting our future". It introduces 100 emerging technologies by first describing them in detail and then focusing on their "Future Perspectives". For every technology the content was scraped and stored. It was subsequently manually reviewed for future-related content.     
+Horizons\footnote{\url{https://radar.envisioning.io/horizons}} is more focused on emerging technologies. It is an "interactive visualization tool for discovering and learning about the technologies affecting our future". It introduces 100 emerging technologies by first describing them in detail and then focusing on their "Future Perspectives". For every technology the content was scraped and stored. It was subsequently manually reviewed for future-related content.
 To make the dataset balanced, non-future-related sentences were added to the dataset. These sentences were taken from the technology description section of the same website. Figure \ref{fig:horizons} depicts a screenshot of the Horizons website.
 
 \subsubsection{Analysis of the dataset}
@@ -178,7 +242,7 @@ Approximately 50 sentences were obtained as a result of this process. This is no
 
 
 \subsection{ChatGPT} % https://arxiv.org/pdf/2303.13367.pdf
-ChatGPT\footnote{\url{https://chat.openai.com/}} is a groundbreaking language model developed by OpenAI in 2022. As a large-scale language model, it has been engineered to provide human-like responses to prompts and questions, mimicking a natural chat-based conversation. 
+ChatGPT\footnote{\url{https://chat.openai.com/}} is a groundbreaking language model developed by OpenAI in 2022. As a large-scale language model, it has been engineered to provide human-like responses to prompts and questions, mimicking a natural chat-based conversation.
 
 The architecture of ChatGPT is based on the GPT-3.5 model, but newer iterations like GPT-4\footnote{\url{https://openai.com/research/gpt-4}} have since been introduced. Its underlying framework, the transformer architecture, plays a crucial role in enabling ChatGPT to understand and generate coherent and contextually appropriate responses.
 
@@ -188,7 +252,7 @@ By training on vast amounts of text data, ChatGPT has gained an impressive under
 ChatGPTs ability to generate responses in a chat-like format makes it an excellent tool for creating high-quality training data. By providing specific prompts to ChatGPT, one can obtain responses that closely align with the desired data requirements. This level of control allows for the generation of highly specific and tailored training data.
 
 \subsubsection{Generating Future-related Sentences with ChatGPT}
-As previously mentioned, the sentences extracted from sources such as \textit{Longbets} exhibit a high similarity in structure, typically characterized by the presence of the word \textit{"will"} followed by a future date. Due to the necessity for a more diverse range of sentence structures and vocabulary, the integration of ChatGPT became necessary. By leveraging the chatbots capabilities, sentences containing diverse sets of words and having diverse sentence structure were generated. The incorporation of ChatGPT fulfilled the requirement for diversity in the training data. \\
+As previously mentioned, the sentences extracted from sources such as \textit{Longbets} exhibit a high similarity in structure, typically characterized by the presence of the word \textit{"will"} followed by a future date. Due to the necessity for a more diverse range of sentence structures and vocabulary, the integration of ChatGPT became necessary. By leveraging the chatbot's capabilities, sentences containing diverse sets of words and having diverse sentence structure were generated. The incorporation of ChatGPT fulfilled the requirement for diversity in the training data. \\
 
 In the following a subset of prompts are shown, that were given to ChatGPT:
 \begin{itemize}
@@ -198,13 +262,13 @@ In the following a subset of prompts are shown, that were given to ChatGPT:
 \end{itemize}
 
 \subsection{News}
-As already layed out, the classifier will ultimately need to classify sentences extracted from news articles. Therefore it makes sense for the dataset to be primarily composed of sentences originating from a news corpus. Manually searching for and extracting future-related sentences from news articles can be very time-consuming however. Consequently a bootstrapping approach was followed, which involved training the classifier initially only on the Longbets, Horizons, and ChatGPT datasets. This first version of the classifier was then used to classify sentences extracted from 20,000 New York Times\footnote{\url{https://www.nytimes.com/}} articles.
+As already laid out, the classifier will ultimately need to classify sentences extracted from news articles. Therefore it makes sense for the dataset to be primarily composed of sentences originating from a news corpus. Manually searching for and extracting future-related sentences from news articles can be very time-consuming however. Consequently a bootstrapping approach was followed, which involved training the classifier initially only on the Longbets, Horizons, and ChatGPT datasets. This first version of the classifier was then used to classify sentences extracted from 20,000 New York Times\footnote{\url{https://www.nytimes.com/}} articles.
 Despite the limited amount of data used in the training process, the resulting classifier demonstrated an ability to make accurate predictions, making it much more viable to extract and review further predictions than extracting them manually. Moreover this gave the chance to identify the types of sentences that the model was uncertain about, which were then manually classified and incorporated into the training process.
 
 \section{Annotation of Future-related Sentences}
-\begin{figure}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=16cm]{img/classification_website.png}
+  \includegraphics[width=\linewidth]{img/classification_website.png}
   \caption{Screenshot of the classification website.}
   \label{fig:classification_website}
 \end{figure}
@@ -247,7 +311,7 @@ Instead of generating a single attention vector for each input embedding, the or
 
 To accomplish this, the model employs multiple sets of Q, V, and K matrices, with the exact number determined by the number of attention heads used. Each input word embedding undergoes the self-attention process multiple times, with each iteration utilizing a distinct set of Q, V, and K matrices.
 
-As a result, each word embedding in the sequence is associated with multiple attention vectors. To integrate the information from these attention vectors, they are concatenated together. The concatenated vector is then passed through the subsequent neural network layer, which follows the multi-head self-attention layer. 
+As a result, each word embedding in the sequence is associated with multiple attention vectors. To integrate the information from these attention vectors, they are concatenated together. The concatenated vector is then passed through the subsequent neural network layer, which follows the multi-head self-attention layer.
 One reason for the use of multiple attention heads is that the multiple attention heads allow the model to focus on different aspects of the input sequence. Thus the model can capture various patterns, relationships and dependencies among the data. This allows for a more comprehensive representation of the input, enabling the model to learn more nuanced and detailed information. \cite{VaswaniAttentionIsAll}
 
 
@@ -278,7 +342,7 @@ We will now delve into a detailed exploration of the architecture of the BERT mo
   \centering
   \includegraphics[width=12cm]{img/bert_input_representation.png}
   \caption{BERT input representation. \cite{bert}}
-  \label{fig:bert_architecture}
+  \label{fig:bert_input_representation}
 \end{figure}
 The input to BERT consists of a string that can encompass multiple sentences. This string is initially divided into its constituent words. These words undergo embedding using the WordPiece model \cite{wordpiece}, where each word is mapped to a predefined vector representation.
 
@@ -330,12 +394,12 @@ By incorporating these variations, the model is compelled to maintain robust emb
 During the pre-training phase, the model undergoes another procedure that enables it to understand the relationship between sentences. This procedure is formulated as a binary classification problem. Randomly selected sentences (referred to as A and B) are chosen from the corpus. In half of the instances, sentence B genuinely follows sentence A, while in the remaining cases, this sequential relationship does not hold. The model utilizes the output of the \textit{[CLS]} token as the binary classification output for this task. \cite{bert}
 
 \subsubsection{Pretraining Data}
-The data used for pretraining the model consists of two major sources: the BooksCorpus and the English Wikipedia. These large text collections provide a rich and diverse range of linguistic content for the model to learn from. The BooksCorpus dataset encompasses a substantial 800 million words, while the English Wikipedia dataset offers an even larger volume of 2,500 million words. 
+The data used for pretraining the model consists of two major sources: the BooksCorpus and the English Wikipedia. These large text collections provide a rich and diverse range of linguistic content for the model to learn from. The BooksCorpus dataset encompasses a substantial 800 million words, while the English Wikipedia dataset offers an even larger volume of 2,500 million words.
 
 By training on such large and varied textual data, the model gains a comprehensive understanding of language. \cite{bert}
 
 \subsection{Fine-tuning}
-The pretrained BERT model offers the flexibility to be fine-tuned for a wide range of tasks. To accomplish this, the outputs of the pretrained model are passed through a simpler network that specializes in finetuning the model for a specific task. By adjusting the weights of this new network during the fine-tuning process, BERT becomes specifically tuned for the desired task. Compared to the pre-training procedure, where the entire model is trained from scratch, this fine-tuning process is significantly simpler and faster.
+The pretrained BERT model offers the flexibility to be fine-tuned for a wide range of tasks. To accomplish this, the outputs of the pretrained model are passed through a simpler network that specializes in finetuning the model for a specific task. By adjusting the weights of this new network during the fine-tuning process, BERT becomes specifically tuned for the desired task. Compared to the pretraining procedure, where the entire model is trained from scratch, this fine-tuning process is significantly simpler and faster.
 
 This simple approach of adjusting the weights of the added task-specific network makes BERT an attractive choice for tackling various NLP problems. It makes it possible to adapt the powerful pretrained BERT model to specific tasks, without the need for extensive training time and computational resources. \cite{bert}
 
@@ -395,13 +459,13 @@ In addition to the BookCorpus and English Wikipedia corpora, which together amou
 \end{figure}
 The performance of the RoBERTa model was assessed using various metrics and comparisons with other state-of-the-art models for different natural language processing tasks seen in Figure \ref{fig:roberta_results}.
 
-It was determined that the best performing configuration of RoBERTa utilized a training data corpus of 160GB, a batch size of 8k, and a total of 500K training steps. This configuration resulted in superior performance compared to other models. It significantly outpermorms the original $\mathbf{BERT_{LARGE}}$ model and also outperforms the $\mathbf{XLNet_{LARGE}}$ model across a range of NLP tasks.
+It was determined that the best performing configuration of RoBERTa utilized a training data corpus of 160GB, a batch size of 8k, and a total of 500K training steps. This configuration resulted in superior performance compared to other models. It significantly outperforms the original $\mathbf{BERT_{LARGE}}$ model and also outperforms the $\mathbf{XLNet_{LARGE}}$ model across a range of NLP tasks.
 
 An interesting observation made by the authors was that even the longest-trained RoBERTa model did not exhibit overfitting. This finding suggests that the model could potentially benefit from additional training, indicating the potential for further performance improvements.
 
 The superior performance of RoBERTa in various language tasks, proves its effectiveness as a powerful language model. and the evaluation results confirmed the efficacy of the modifications and strategies employed in RoBERTa's training, leading to improved language understanding and representation capabilities. \cite{roberta}
 
-\section{DistilRoBERTa} % distilbert
+\section{DistilRoBERTa}
 Due to the convincing results RoBERTa achieved, it was decided to use it as the basis for our classifier. RoBERTa however is, as we've just seen, a very big model with lots of parameters, which makes it somewhat slow compared to smaller models. This poses a problem for our use case, as our ultimate objective is to develop an interactive website that can deliver results to users quickly and efficiently. Therefore, it is crucial for our classifier to perform inference rapidly.
 
 To achieve this goal, it was decided to utilize the DistilRoBERTa model\footnote{\url{https://huggingface.co/distilroberta-base}} by Hugging Face. DistilRoBERTa is a compressed version of the original RoBERTa model that maintains its high performance while significantly reducing its size. This compressed model allows us to achieve a balance between resource efficiency and accuracy.
@@ -413,10 +477,10 @@ Knowledge distillation is a compression technique designed to enable a smaller m
 
 The intuition behind employing this distillation loss lies in the fact that the teacher's output distribution provides more information to the student than just the one-hot-encoded training distribution alone. By leveraging the teacher's knowledge and understanding, the student model can learn more efficiently and capture the nuances present in the teacher's predictions. \cite{BucilDistil} \cite{HintonDistilling}
 
-\subsection{DistilRoBERTa} % distilbert
+\subsection{DistilRoBERTa}
 DistilRoBERTa, as indicated by its name, incorporates the knowledge distillation process to distill the knowledge from RoBERTa. In addition, it introduces some modifications to the RoBERTa model. These modifications include the removal of certain tokenization steps, a reduction in the number of layers, and the utilization of optimized linear algebra frameworks for linear layers and layer normalization.
 
-These modifications have been very successful, as demonstrated by the following results. DistilRoBERTa achieves an impressive 95\% of the performance of RoBERTa-base on the GLUE benchmark. DistilRoBERTa also has significant advantages in terms of efficiency. It achieves twice the inference speed while being 35\% smaller in size compared to RoBERTa-base. 
+These modifications have been very successful, as demonstrated by the following results. DistilRoBERTa achieves an impressive 95\% of the performance of RoBERTa-base on the GLUE benchmark. DistilRoBERTa also has significant advantages in terms of efficiency. It achieves twice the inference speed while being 35\% smaller in size compared to RoBERTa-base.
 
 This exceptional balance between performance and efficiency makes DistilRoBERTa a desirable choice for our use case. \cite{distilbert}
 
@@ -436,7 +500,7 @@ Firstly, from the figure it is evident that the number of tokens, also known as 
 \subsection{Mean-Pooling the DistilRoBERTa Outputs}
 After the tokenization step, we obtain 50 embedding vectors, each having a dimension of 768. These vectors are then passed through the encoders of DistilRoBERTa. As a result, we obtain the same number of vectors with the same dimension, but now these vectors contain contextual information from the sentence. This contextual information, computed with attention, is visually represented by the red color in the figure.
 
-While we now have contextualized embedding vectors for each input token, our goal is to classify the entire sentence as a whole. Therefore, it would be beneficial to have a single embedding vector that represents the entire sentence. This would also reduce the size of our finetuning feed-forward network. To achieve this, we compute the mean over all 50 embedding vectors. There are other ways to do this, such as utiliting the \textit{[CLS]} token, however HuggingFace recommends employing mean pooling\footnote{\url{https://huggingface.co/transformers/v4.7.0/model-doc/roberta.html}}.
+While we now have contextualized embedding vectors for each input token, our goal is to classify the entire sentence as a whole. Therefore, it would be beneficial to have a single embedding vector that represents the entire sentence. This would also reduce the size of our finetuning feed-forward network. To achieve this, we compute the mean over all 50 embedding vectors. There are other ways to do this, such as utilizing the \textit{[CLS]} token, however HuggingFace recommends employing mean pooling\footnote{\url{https://huggingface.co/transformers/v4.7.0/model-doc/roberta.html}}.
 
 After the mean pooling operation, we obtain a single embedding vector of dimensionality 768. This vector captures the overall meaning and essence of the entire sentence, enabling us to perform efficient sentence-level classification on it next.
 
@@ -445,7 +509,7 @@ The output of the mean-pooling operation serves as the input layer for our finet
 
 
 \subsubsection{Training Details}
-During the training phase, the weights of the finetuning network were initialized randomly. It is important to note that the weights of the pretrained model were frozen completely during the fine-tuning process, so they are not part of the training process. We employ the binary cross entropy with logits loss as our loss function, which implicitly applies a sigmoid activation to the model output. The model was trained on our dataset over the course of 14 epochs with the following configurations: 
+During the training phase, the weights of the finetuning network were initialized randomly. It is important to note that the weights of the pretrained model were frozen completely during the fine-tuning process, so they are not part of the training process. We employ the binary cross entropy with logits loss as our loss function, which implicitly applies a sigmoid activation to the model output. The model was trained on our dataset over the course of 14 epochs with the following configurations:
 \begin{itemize}
   \item Batch size: 8
   \item Learning rate: $1.5e^{-6}$
@@ -503,9 +567,6 @@ Next, only sentences with a confidence score equal to or above 0.9 are considere
 For sentences with confidence scores below 0.9, they are classified as non-future sentences. These sentences are stored in a separate database table. They can be later reviewed and manually inspected. Depending on the analysis, they may be added to the training dataset for further improvement of the model.
 Also the future-related sentences are stored in the database and may be later added to the training dataset.
 
-%\subsection{Implementation}
-%The implementation of the DistilRoBERTa model with the appended finetuning network was done using PyTorch Lightning. PyTorch Lightning provided a simplified training process by reducing the amount of boilerplate code required for tasks such as data loading and model training.
-
 \chapter{Topic Modeling}
 After downloading articles and classifying their sentences as future-related or not, the future-related sentences should be shown to the user. However, simply presenting these sentences individually may not provide a comprehensive understanding of the data. To address this, we want to group related sentences together. Among various grouping strategies, organizing sentences by topic emerges as the most logical choice. By clustering sentences that share common content, we can present interconnected information to the user.
 So the primary objective of this chapter is to explore the topic modeling approach employed in our system.
@@ -514,7 +575,7 @@ So the primary objective of this chapter is to explore the topic modeling approa
 
 
 \section{Shortcomings of Conventional Models}
-In the field of topic modeling, conventional models have long relied on representing documents as a bag-of-words, employing techniques such as Latent Dirichlet Allocation (LDA) \cite{BleiLDA}. One of the primary limitations of those conventional models is their failure to capture the semantic connections that exist between words. By treating a document as a collection of independent words, these models disregard the contextual information that can be obtained by analyizing the interplay of words within a sentence.
+In the field of topic modeling, conventional models have long relied on representing documents as a bag-of-words, employing techniques such as Latent Dirichlet Allocation (LDA) \cite{BleiLDA}. One of the primary limitations of those conventional models is their failure to capture the semantic connections that exist between words. By treating a document as a collection of independent words, these models disregard the contextual information that can be obtained by analyzing the interplay of words within a sentence.
 
 The rise of text embedding models revolutionized the way we understand and analyze textual data. Leveraging the success of these text embedding models, researchers began incorporating them into the realm of topic modeling.
 
@@ -530,7 +591,7 @@ To address the limitations we have discussed, an innovative topic modeling appro
 BERTopic operates through a three-step process. In the following sections, we will explore each step to gain an understanding of BERTopic's functionality.
 
 \subsection{Document Embeddings}
-The initial step involves mapping documents to a vector space, which can be accomplished through an embedding process. In the case of BERTopic, a pre-trained language model called SBERT \cite{sbert} is utilized for this purpose. As the name suggests, SBERT is based on BERT.
+The initial step involves mapping documents to a vector space, which can be accomplished through an embedding process. In the case of BERTopic, a pretrained language model called SBERT \cite{sbert} is utilized for this purpose. As the name suggests, SBERT is based on BERT.
 
 There is a significant distinction between BERT and SBERT in their respective embedding approaches. BERT focuses on generating word embeddings that capture the meaning and context of individual words within a sentence. It achieves this by considering the surrounding words and their relationships. \cite{bert} On the other hand, SBERT aims to map similar sentences to similar vectors in the embedding space, specifically using cosine similarity as a measure. \cite{sbert}
 
@@ -629,14 +690,14 @@ The capabilities of SUTime are not without their limitations. Although most of t
 While the tagger generally performs well, there are some problems with ambiguous references like for example \textit{"On Tuesday, he revealed his decision, which will become official soon"}. The time-tagger maps \textit{"on Tuesday"} to the coming Tuesday, which is in the future, even though the sentence is referring to a past event. Given the repeated occurrence of this issue during system testing, a decision was taken to exclude all temporal expressions referencing weekdays. \cite{sutime}
 
 \subsection{Comparative Analysis of SUTime Against Other Temporal Tagging Systems}
-In order to evaluate the effectiveness of the SUTime temporal tagger, the authors conducted a series experiments comparing its performance against other state-of-the-art systems. The systems chosen for comparison were GUTime \cite{gutime}, HeidelTime \cite{heideltime}, and TRIPS/TRIOS \cite{trips}.
+In order to evaluate the effectiveness of the SUTime temporal tagger, the authors conducted a series of experiments comparing its performance against other state-of-the-art systems. The systems chosen for comparison were GUTime \cite{gutime}, HeidelTime \cite{heideltime}, and TRIPS/TRIOS \cite{trips}.
 
 The authors discovered that both rule-based systems, represented by HeidelTime, and probabilistic systems, represented by TRIPS/TRIOS, exhibited comparable effectiveness in recognizing temporal expressions. This was reflected in their similar F1 scores, highlighting that rule-based approaches could capture a significant portion of temporal patterns.
 
-However, among the systems under examination, SUTime emerged as the frontrunner in terms of performance, achieving the highest F1 score and recall for identifying temporal expressions. \cite{sutime} This outcome underscores the ability of SUTime in accurately and comprehensively detecting temporal nuances within text.
+However, among the systems under examination, SUTime emerged as the winner in terms of performance, achieving the highest F1 score and recall for identifying temporal expressions. \cite{sutime} This outcome underscores the ability of SUTime in accurately and comprehensively detecting temporal nuances within text.
 
 
-\chapter{System Implementation and Architecture}
+\chapter{System Architecture and Implementation}
 In this chapter, we explore the detailed implementation of the frontend and backend components of the web application, which can be accessed with a standard browser at the following URL: \url{http://chronicle2050.regevson.com}. We explore the design choices made, the structure of the system, and the integration of various technologies and frameworks. This chapter highlights the development process, from the frontend user interface to the backend server architecture.
 
 \begin{figure}[H]
@@ -657,7 +718,7 @@ For this project, a frontend framework called Vue.js\footnote{\url{https://vuejs
 \begin{itemize}
   \item \textbf{Declarative Rendering:} Vue extends standard HTML by introducing a template syntax that enables developers to embed JavaScript state directly into the HTML. This approach allows for more intuitive and concise UI development.
 
-  \item \textbf{Reactivity:} One of Vues key strengths is its reactivity system. It monitors changes in the JavaScript state and automatically updates the Document Object Model (DOM) to reflect those changes. This feature eliminates the need for developers to manually manipulate the DOM, resulting in increased productivity and code maintainability. 
+  \item \textbf{Reactivity:} One of Vue's key strengths is its reactivity system. It monitors changes in the JavaScript state and automatically updates the Document Object Model (DOM) to reflect those changes. This feature eliminates the need for developers to manually manipulate the DOM, resulting in increased productivity and code maintainability.
 \end{itemize} \cite{vuejs}
 
 While there are numerous frameworks on the market offering similar functionality, Vue stands out as one of the most popular choices alongside Angular and React. All these modern frontend frameworks have large communities, active maintenance, extensive documentation, and good performance. However, Vue possesses specific strengths that were particularly important for this project, ultimately leading to its selection as the frontend framework.
@@ -670,58 +731,72 @@ So by choosing Vue, a simple and efficient development process was possible, ena
 In this section, we discus about the planning and design of the user interface (UI).
 
 \subsubsection{Design Workflow}
-Before implementing the HTML/CSS layout, the UI was initially conceptualized and designed using Photoshop\footnote{\url{https://www.adobe.com/products/photoshop.html}}. This workflow allowed for a quick visualization of the ideas before investing time into their actual implementation, which can be a more time-consuming process. %Figure XY showcases a comparison between a Photoshop draft and its final implementation.
+Before implementing the HTML/CSS layout, the UI was initially conceptualized and designed using Photoshop\footnote{\url{https://www.adobe.com/products/photoshop.html}}. This workflow allowed for a quick visualization of the ideas before investing time into their actual implementation, which can be a more time-consuming process.
 
 
 \subsubsection{Settings and Input}
 Upon entry, the website shows a settings panel that provides the user with some adjustable configurations. Here, decisions about whether updates should be automatic or manual can be made. There’s also the possibility to specify the quantity of articles and their time frame. A text field prompts users to specify an entity for exploration.
 
-%\subsubsection{Statistics}
-%The website also includes a dedicated statistics section to provide users with insightful information:
+\subsubsection{Statistics}
+The website also includes a dedicated statistics section to provide users with insightful information:
 
-%\textbf{Percentage of sentences with and without temporal expressions:} Users can identify the percentage of sentences that contain temporal references, such as "next year" or "this August." \\
-%\textbf{Number of clusters:} Users can obtain information about the total number of clusters present in the dataset. \\
-%\textbf{Average number of sentences per cluster:} This statistic showcases the average quantity of sentences that are associated with each cluster. \\
-%The presentation of these statistics is designed to provide users with a comprehensive overview and enhance their understanding of the returned data.
+\begin{itemize}
+  \item \textbf{Percentage of sentences with and without temporal expressions:} Users can identify the percentage of sentences that contain temporal references, such as \textit{"next year"} or \textit{"this August"}.
+  \item \textbf{Number of clusters:} Users can obtain information about the total number of clusters present in the dataset.
+  \item \textbf{Average number of sentences per cluster:} This statistic showcases the average quantity of sentences that are associated with each cluster.
+\end{itemize}
+The presentation of these statistics is designed to provide users with a comprehensive overview and enhance their understanding of the returned data.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm]{img/statistics.png}
+\caption{Screenshot of the statistics section of the website.}
+\label{fig:statistics_website}
+\end{figure}
+
 
 \subsubsection{Timeline Visualization}
  The timeline section is one of the key components of the website. It offers valuable insights into the relationships between topics and the referenced dates within the associated sentences.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=13cm]{img/timeline.png}
+\caption{Screenshot of part of the timeline section of the website.}
+\label{fig:timeline_website}
+\end{figure}
+
 \paragraph{Axes}
-The y-axis of the timeline contains all topics that contain sentences with temporal expressions. As already mentioned those temporal expressions could be phrases like "next August", "this Summer", ... . The topics on the timeline are organized in a manner that reflects their relevance. This arrangement places more relevant topics towards the top of the y-axis, while less relevant ones are positioned towards the bottom. The specific criteria used to determine relevance will be explored and explained in detail in section \ref{subsec:clustering}.
+The y-axis of the timeline contains all topics that contain sentences with temporal expressions. As already mentioned those temporal expressions could be phrases like \textit{"next August", "this Summer", ...}. The topics on the timeline are organized in a manner that reflects their relevance. This arrangement places more relevant topics towards the top of the y-axis, while less relevant ones are positioned towards the bottom. The specific criteria used to determine relevance will be explored and explained in detail in section \ref{subsec:clustering}.
 
 On the other hand, the x-axis displays a series of dates, corresponding to the temporal expressions within the sentences.
 
 \paragraph{Datapoints}
-To provide a concrete example: a data point on the timeline, with coordinates (x, y), represents a collection of sentences belonging to topic y. These sentences contain temporal expressions referencing the date x.
+To provide a concrete example: a data point on the timeline, with coordinates (x,y), represents a collection of sentences belonging to topic y. These sentences contain temporal expressions referencing the date x.
 
-Hovering over or clicking on a data point on the timeline reveals a tooltip section containing all sentences associated with the topic and the referenced date. Each sentence is accompanied by a numerical count, indicating how often it is mentioned in the news corpus. To avoid duplicate content, similar sentences offering the same information are intelligently removed to avoid redundancy and also count as mentions. A brief notification informs users about the omitted sentences due to similarity.
+Hovering over or clicking on a data point on the timeline reveals a tooltip section (Figure \ref{fig:tooltip_website}), containing all sentences associated with the topic and the referenced date. Each sentence is accompanied by a numerical count, indicating how often it is mentioned in the news corpus. To avoid duplicate content, similar sentences offering the same information are intelligently removed to avoid redundancy and also count as mentions. A brief notification informs users about the omitted sentences due to similarity.
 
 Furthermore, the section offers an option to display sentences linked to the topic, even if they lack temporal expressions and do not appear on the timeline. This provides a more comprehensive view of the topic and its context. To get more information, clicking on a sentence opens a new tab displaying the entire article from which the sentence was extracted. This feature enables users to access the full context, gaining deeper insights and making well-informed interpretations.
 
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{img/tooltip.png}
+\caption{Screenshot of the tooltip of a datapoint.}
+\label{fig:tooltip_website}
+\end{figure}
+
 \subsubsection{Word Cloud Visualization}
-The Word Cloud showcases sentences that lack any temporal expressions and is positioned beneath the timeline.
+The Word Cloud (Figure \ref{fig:wordcloud_website}) showcases sentences that lack any temporal expressions and is positioned beneath the timeline.
 
 Each distinct topic within the corpus receives its own dedicated cloud, displaying the most representative words associated with that topic. The size of each cloud dynamically adjusts based on the relevance of the corresponding topic, offering a visual cue about its significance.
 
 Furthermore the Word Cloud is interactive. When users hover or click on a specific cloud, a tooltip emerges, revealing all the relevant sentences that belong to that particular topic. Just like with the timeline-tooltip, users can click on any sentence within the tooltip to instantly access its source article. Moreover, the number of times each sentence appears in the corpus is indicated next to it, providing additional context about its frequency and importance.
 
-%\subsubsection{Log Visualization}
-%To ensure that users are continuously informed about the backend processing progress, a Log View was introduced that can be easily toggled open or closed.
-
-%Within this Log Section, users can access important information about the ongoing processing. Here are the key details provided:
-
-%\begin{itemize}
-  %\item \textbf{Total Number of Articles Fetched:} This figure represents the entire count of articles that are retrieved from the internet.
-
-  %\item \textbf{Number of Fetched Articles:} Users can keep track of the precise number of articles that have already been fetched and processed.
-
-  %\item \textbf{Total Number of Updates:} This indicates the overall count of updates that are processed by the backend.
-
-  %\item \textbf{Number of Remaining Updates:} To give users a clear understanding of the remaining work, this metric highlights the number of updates yet to be processed by the system.
-%\end{itemize}
-
-%Towards the end of the log-view, all the log-messages from the backend are conveniently printed out. This enables users to gain an in-depth understanding of the system's activity and progress.
+\begin{figure}[H]
+\centering
+\includegraphics[width=15cm]{img/wordcloud.png}
+\caption{Screenshot of the wordcloud section of the website.}
+\label{fig:wordcloud_website}
+\end{figure}
 
 \subsubsection{Charting Library}
 The timeline was created using ApexCharts\footnote{\url{https://apexcharts.com/}}, a charting library that enables the creation of interactive visualizations for web pages. To seamlessly integrate ApexCharts with Vue.js, a library called vue3-apexcharts\footnote{\url{https://github.com/apexcharts/vue3-apexcharts}} was utilized, which acts as a convenient wrapper library. This integration helps Vue developers by allowing them to interact with ApexCharts using the familiar Vue syntax.
@@ -733,7 +808,7 @@ As the backend processes the data, the frontend polls the 'status'-endpoint, con
 
 
 \section{Backend Implementation}
-With a clear grasp of the layout and insight into the frontend-backend interaction, the focus now shifts to the backend implementation.
+With a clear grasp of the layout and insight into the frontend-backend interaction, the focus of our discussion now shifts to the backend implementation.
 
 \subsection{Django Framework}
 The backend infrastructure was developed with the Django Framework\footnote{\url{https://www.djangoproject.com/}}. It is an open-source platform and is built upon the foundation of the Python programming language, leveraging Python's principles and capabilities. Django empowers developers to swiftly translate their concepts into reality. One of its standout attributes lies in its scalability which allows developers to build applications that can handle increased user loads and growing datasets. While such features are present in many well-regarded frameworks, Django was chosen specifically due to its use of the Python programming language. As the classifier is implemented with PyTorch\footnote{\url{https://pytorch.org/}} in Python, it was logical to use a python-based framework like Django for the backend. Moreover, Django seamlessly integrates with a REST framework\footnote{\url{https://www.django-rest-framework.org/}}, making it very easy to create and expose endpoints. The framework's simplicity further contributed to its selection, making it an ideal choice to kickstart and quickly implement various functionalities.
@@ -763,7 +838,7 @@ After classification, sentences with a model confidence level over 0.8 are store
 \label{subsec:clustering}
 The clustering step also takes place within the Google Colab environment, leveraging its powerful GPU capabilities for better speeds.
 
-The clustering step is straightforward due to the simple nature of BERTopic. As detailed in Section \ref{bertopic_config}, the specific parameter values used have already been established. BERTopic generates an array for each topic, filled with sentences belonging to that topic, alongside a corresponding array containing the sentence embeddings for further analysis. The representative topic keywords can be easily obtained by simply calling the corresponding function.
+The clustering step is straightforward due to the simple nature of BERTopic. As detailed in section \ref{bertopic_config}, the specific parameter values used have already been established. BERTopic generates an array for each topic, filled with sentences belonging to that topic, alongside a corresponding array containing the sentence embeddings for further analysis. The representative topic keywords can be easily obtained by simply calling the corresponding function.
 
 To improve the quality of topic modeling results and rank sentences based on their relevance, we postprocess the results in two ways.
 First, we remove outliers from topics by matching the topic keywords against the words in each sentence. If a sentence contains fewer than three topic keywords, it is removed from the dataset. The next step eliminates redundancy within a topic and evaluates the relevance of each sentence. Using the previously generated sentence embeddings from the topic modeling step, we calculate the cosine similarity between all sentence pairs within the same topic. When two sentences have a cosine similarity above 0.8, they are considered duplicates. The shorter sentence is discarded, and the duplicate count of the longer sentence is incremented. This duplicate count serves as a measure of sentence relevance. The greater the number of duplicates, the more frequently the sentence appeared in news articles and the more relevant it might be.
@@ -781,9 +856,94 @@ Expressions referencing the past are omitted. In cases where sentences contain m
 
 Upon successful identification and mapping, the extracted dates are added to the database (containing the clustered sentences) as a new column. This marks the end of the backend's data processing workflow.
 
+\section{Examples}
+To showcase the website's capabilities, we now examine some examples. We present the results generated by the system in response to three queries. We focus solely one the timeline section's results, as it incorporates all the system's functionality.
+
+\subsection{NASA}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|p{9cm}|c|}
+\hline
+\textbf{Topic} & \centering\arraybackslash \textbf{Sentences} & \textbf{Mapped Date} \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{sample\\johnson\\11\\asteroid}} & The first asteroid sample collected in space and brought to Earth by the United States \textbf{will be unveiled} at NASA's Johnson Space Center in Houston on \textbf{Wednesday, Oct. 11}, and media accreditation is now open. & \multirow{2}{*}[0pt]{11/10/2023} \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{eclipse\\annular\\solar\\14}} & On \textbf{Saturday, Oct. 14}, the Moon \textbf{will pass} between Earth and the Sun, giving people across the United States an opportunity to see an annular solar eclipse. & \multirow{2}{*}[0pt]{14/10/2023} \\ \cline{2-2}
+ & An Indian-origin scientist at NASA \textbf{is helming} a mission that \textbf{aims to launch} three rockets during the 2023 annular eclipse on \textbf{October 14}. &  \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{prada\\axiom\\design\\spacesuits}} & Italian luxury group Prada and Texas-based startup Axiom Space \textbf{will collaborate} to design NASA's lunar spacesuits for the Artemis III mission planned for \textbf{2025}, the two companies said. & 01/01/2025 \\ \hline
+\end{tabular}
+\caption{Some Results from the Timetable-Section for the Query \textit{"NASA"}.}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{img/nasa.png}
+\caption{Screenshot of the Timetable-Section for the Query \textit{"NASA"}.}
+\label{fig:results_nasa}
+\end{figure}
+
+\subsection{Ukraine}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|p{9cm}|c|}
+\hline
+\textbf{Topic} & \textbf{Sentences} & \textbf{Mapped Date} \\ \hline
+\multirow{2}{*}[0pt]{\makecell{mccarthy\\kevin\\speaker\\shift}} & Speaker Kevin McCarthy's ouster on \textbf{Tuesday (3 October)} \textbf{could signal a shift} in the US House of Representatives on aid to Ukraine, with some of his possible successors strongly in favor of assisting… & \multirow{2}{*}[0pt]{03/10/2023} \\
+\hline
+\multirow{2}{*}[0pt]{\makecell{growth\\economy\\adapting\\environment}} & Ukraine's economy is adapting well to the wartime environment following Russia's invasion and \textbf{growth will continue} \textbf{next year}, the deputy head of an International Monetary Fund mission… & \multirow{2}{*}[0pt]{01/01/2024} \\
+\hline
+\multirow{2}{*}[0pt]{\makecell{joseph\\borell\\chief\\policy}} & European Union foreign policy chief Josep Borrell said on Monday that he proposed to Ukraine a new bilateral multi-annual envelope of the European peace facility of up to 5 billion euros (\$5.26 billion) \textbf{for the next year}. & \multirow{2}{*}[0pt]{01/01/2024} \\
+\hline
+\multirow{2}{*}[0pt]{\makecell{drone\\ihnat\\drones\\winter}} & \textbf{This fall and winter} \textbf{will see} a record number of Russian Shahed drone attacks on Ukraine, Ukrainian Air Force spokesman, Yuri Ihnat, said on national television on Oct. 6. & \multirow{2}{*}[0pt]{06/11/2023} \\
+\hline
+\end{tabular}
+\caption{Some Results from the Timetable-Section for the Query \textit{"Ukraine"}.}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{img/ukraine.png}
+  \vspace{-0.5cm}
+\caption{Screenshot of the Timetable-Section for the Query \textit{"Ukraine"}.}
+\label{fig:results_ukraine}
+\end{figure}
+
+\subsection{Tennis}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|p{9cm}|c|}
+\hline
+\textbf{Topic} & \centering\arraybackslash \textbf{Sentences} & \textbf{Mapped Date} \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{halep\\simona\\2026\\appeal}} & Two-time Grand Slam champion Simona Halep \textbf{will be ineligible} to play professional tennis until \textbf{October 2026} after the ITIA found that the Romanian violated the Tennis Anti-Doping Programme (TADP) at the '22 U.S. Open. & \multirow{2}{*}[0pt]{01/10/2026} \\ \cline{2-2}
+  & A second accusation against Halep had arisen in the spring due to "irregularities in the biological passport" - This means that Halep \textbf{will remain} banned until \textbf{October 2026}, but has already announced that he will appeal the verdict. &  \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{federer\\roger\\laver\\swiss}} & After losing to Team World this year, Roger Federer \textbf{makes a plea} to his long time rival Novak Djokovic about a prospective comeback to the Laver Cup \textbf{next year}. & 01/01/2024 \\ \hline
+  \multirow{2}{*}[0pt]{\makecell{tennis\\table\\games\\cup}} & He may not be 100 percent back from a shoulder injury that kept him sidelined for six months earlier this year, but Korean tennis player Kwon Soon-woo still \textbf{sees himself} as a gold medal contender in the men's doubles at the Asian Games in China \textbf{this fall}. & 06/11/2023 \\ \hline
+\end{tabular}
+\caption{Some Results from the Timetable-Section for the Query \textit{"Tennis"}.}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{img/tennis.png}
+  \vspace{-0.5cm}
+\caption{Screenshot of the Timetable-Section for the Query \textit{"Tennis"}.}
+\label{fig:results_tennis}
+\end{figure}
+
+\subsection{Analysis of Examples}
+When analyzing the examples, several noteworthy observations emerge:
+We can see that the topic-keywords serve as accurate representations of the content contained within the sentences.
+Moreover, there are instances where multiple sentences within a topic are associated with the same date. An example for this would be the topic \textit{"halep-simona-2026-appeal"} of the \textit{"Tennis"} query.
+Here, the second sentence contributes valuable additional information - a consequence of the redundancy elimination performed during the postprocessing stage.
+Furthermore, the examples showcase the ability of the system to accurately detect and map temporal expressions to dates.
+It is also evident that the system not only generates results for the immediate future but also presents sentences referring to the more distant future.
+It's worth noting, however, that the occurrence of distant future results is less frequent when compared to those referencing the near future.
+
+
 \chapter{Evaluation}
 
-To assess the effectiveness of our system, we developed a six-task exercise and presented it to six users of varying age and technical affinity. Each user had to complete the exercise with one of three entities. These tasks were designed to examine the timeline and word cloud components. The tasks included: 
+To assess the effectiveness of our system, we developed a six-task exercise and presented it to six users of varying age and technical affinity. Each user had to complete the exercise with one of three entities. These tasks were designed to examine the timeline and word cloud components. The tasks included:
 \begin{itemize}
   \item 1) Summarizing the entity's future outlook.
   \item 2) Determining which topic and date have the highest/lowest relevance and analyzing the overall ranking.
@@ -797,25 +957,40 @@ The users provided lengthy summaries, implying a wide range of predictions for u
 
 Overall, the system received strong approval from its users. On a five-star scale, the following results were obtained:
 \begin{itemize}
-  \item Topic quality: 4 star average 
+  \item Topic quality: 4 star average
   \item Classification quality: 4 star average
-  \item Time-tagging quality: 3 star average 
+  \item Time-tagging quality: 3 star average
   \item Ranking: 3.5 star average
-  \item Visualization: 4.5 star average 
+  \item Visualization: 4.5 star average
 \end{itemize}
-Users were particularly satisfied with the ability of the system to provide information about an entity's future plans, events, and decisions. However, the biggest critique was the system's speed, especially the time it takes to retrieve the initial results. 
+Users were particularly satisfied with the ability of the system to provide information about an entity's future plans, events, and decisions. However, the biggest critique was the system's speed, especially the time it takes to retrieve the initial results.
+
+\chapter{Future Directions}
+In this section of the thesis, we explore potential improvements for the system we developed. There are several areas where it can be further refined and extended.
+
+One such area is the time-tagging component of our system. Currently, we employ a rule-based time-tagger, but we propose experimenting with a BERT-based model \cite{AlmasianTimetaggerBert}. This shift might help us overcome some of the limitations of the current time-tagger.
+
+Furthermore the output of our system could be extended. Currently, our system presents a ranked list of sentences for each cluster to the user. However, employing an LLM to summarize the most important information in each cluster could enable us to create more concise summaries for the clusters. Especially for clusters with many sentences, having an additional short summary would make the information more accessible for users.
+
+In terms of classification, one could consider using an LLM like ChatGPT\footnote{\url{https://chat.openai.com}}, or a locally hosted model. By providing queries such as \textit{"return 1, if this sentence refers to the future or contains any future-related information, return 0 otherwise"} one could try to improve the system's ability to distinguish future-related content. As LLMs can handle multilingual input, the system would no longer be restricted to English articles.
+
+Additionally, the recent introduction of "GPTs"\footnote{\url{https://openai.com/blog/introducing-gpts}} by OpenAI presents another possible opportunity. This feature allows us to supply reference files to the GPT that instruct it on how to process inputs. In our case, we could provide a file with examples from our training data, including both future and non-future related sentences along with their labels, and instruct the GPT to generate answers based on the content in these files (along with the prompt given above). This approach could enhance the system's classification accuracy.
+
+Another option would be to replace the current language model, DistilRoBERTa, with a model that incorporates temporal information in its pretraining process, such as BiTimeBERT \cite{JatowtBitimeBert}. This change could make our model better understand temporal contexts, improving the overall performance of our system in classifying sentences.
+
 
 \chapter{Conclusion}
-In this work we have developed an approach and implemented a working system for extracting and visualizing future events on timelines for user queries. 
+In this work we have developed an approach and implemented a working system for extracting and visualizing future events on timelines for user queries.
 
-By developing a multi-source dataset of 6,800 labeled sentences, we fine-tuned a DistilRoBERTa model to identify future references. We then used BERTopic for topic modeling and SUTime for time-tagging to extract topics from the data and detect and resolve temporal expressions. A dedicated postprocessing step improved cluster quality and ranked sentences according to their relevance. We also designed an intuitive interface that presents the results with an interactive timeline and word clouds. 
+By developing a multi-source dataset of 6,800 labeled sentences, we fine-tuned a DistilRoBERTa model to identify future references. We then used BERTopic for topic modeling and SUTime for time-tagging to extract topics from the data and detect and resolve temporal expressions. A dedicated postprocessing step improved cluster quality and ranked sentences according to their relevance. We also designed an intuitive interface that presents the results with an interactive timeline and word clouds.
 
 Apart from exploring the implementation details of our system, we also gained insights into the inner workings of the models that were utilized in our system. We followed the evolution of the Transformer to more advanced language models like RoBERTa and DistilRoBERTa. We explored the shortcomings of conventional topic modeling approaches and the advantages of BERTopic. We also examined the functionality of the SUTime temporal tagger and its limitations.
 
 In the end a user study confirmed the system's ability to offer a detailed overview of the future, while also highlighting potential areas for improvement, especially speed.
 
-\bibliographystyle{unsrt}
+
+\bibliographystyle{agsm} %apalike
 \bibliography{sample-base}
 
-\end{document}
 
+\end{document}

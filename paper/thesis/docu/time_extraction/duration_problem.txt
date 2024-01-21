@@ -1,3 +1,0 @@
-After 30 years of planning, it will finally happen on thursday.
-  -> gives <30 years> -> 2053
-  -> should give: 15.04.2023

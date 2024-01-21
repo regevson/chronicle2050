@@ -1,0 +1,3 @@
+negatives: 1035
+positives: 104
+undetermined: 361
