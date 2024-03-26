@@ -18,7 +18,7 @@
 
     <div class="preview" @click="testEntity()">
       <span style="color: white; font-weight: bold">
-        This is a research preview. One of the three queries can be selected.<br>
+        This is a research preview. One of the seven queries can be selected.<br>
         Precomputed values are returned.
       </span>
     </div>

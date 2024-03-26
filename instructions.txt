@@ -1,0 +1,5 @@
+- start server:
+nohup python3 chronicle2050/manage.py runserver&
+
+- kill server:
+pkill -f runserver
